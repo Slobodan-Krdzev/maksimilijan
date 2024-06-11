@@ -1,0 +1,79 @@
+{
+    "wines" :[
+        {
+            "id":"1",
+            "name":"Вранец",
+            "color": "Црвено",
+            "image": "/vranec_bariq.jpg",
+            "vintage" : 2023,
+            "alchocol"  : 12.5,
+            "price" : 300
+        },
+        {
+            "id":"2",
+            "name":"Темајника",
+            "color": "Бело",
+            "image": "/temjanika.jpg",
+            "vintage" : 2023,
+            "alchocol"  : 12.5,
+            "price" : 300
+        },
+        {
+            "id":"3",
+            "name":"Станушина",
+            "color": "Бело",
+            "image": "/malena.jpg",
+            "vintage" : 2023,
+            "alchocol"  : 12.5,
+            "price" : 300
+        },
+        {
+            "id":"4",
+            "name":"Розе",
+            "color": "Бело",
+            "image": "/bella.jpg",
+            "vintage" : 2023,
+            "alchocol"  : 12.5,
+            "price" : 300
+        }
+        ,
+        {
+            "id":"5",
+            "name":"Смедеревка",
+            "color": "Бело",
+            "image": "/bella.jpg",
+            "vintage" : 2023,
+            "alchocol"  : 12.5,
+            "price" : 300
+        }
+        ,
+        {
+            "id":"6",
+            "name":"Каберне Совињон",
+            "color": "Бело",
+            "image": "/bella.jpg",
+            "vintage" : 2023,
+            "alchocol"  : 12.5,
+            "price" : 300
+        },
+        {
+            "id":"7",
+            "name":"Рајски Ризлинг",
+            "color": "Бело",
+            "image": "/bella.jpg",
+            "vintage" : 2023,
+            "alchocol"  : 12.5,
+            "price" : 300
+        }
+        ,
+        {
+            "id":"8",
+            "name":"Рајски Ризлинг",
+            "color": "Црвено",
+            "image": "/bella.jpg",
+            "vintage" : 2023,
+            "alchocol"  : 12.5,
+            "price" : 300
+        }
+    ]
+}

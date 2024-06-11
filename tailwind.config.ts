@@ -13,8 +13,16 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        transparent: "transparent",
+        current: "currentColor",
+        white: "#ffffff",
+        wine: "#831843",
+        cream: "#FFF8e6",
+      },
     },
   },
   plugins: [],
 };
-export default config;
+
+module.exports = config;
