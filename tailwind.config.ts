@@ -18,6 +18,7 @@ const config: Config = {
         current: "currentColor",
         white: "#ffffff",
         wine: "#831843",
+        wine1: "#580e2d",
         cream: "#FFF8e6",
       },
     },

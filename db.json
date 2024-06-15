@@ -5,6 +5,7 @@
             "name":"Вранец",
             "color": "Црвено",
             "image": "/vranec_bariq.jpg",
+            "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit Corporis iste Dolorum inventore dicta nostrum libero doloribus assumenda, accusantium quis fugiat cum voluptatibus temporibus esse odio ipsum ad facilis perferendis nobis voluptate quam quaerat officia laborum est. Aperiam ut",
             "vintage" : 2023,
             "alchocol"  : 12.5,
             "price" : 300
@@ -13,7 +14,8 @@
             "id":"2",
             "name":"Темајника",
             "color": "Бело",
-            "image": "/temjanika.jpg",
+            "image": "/winebottle.png",
+            "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit Corporis iste Dolorum inventore dicta nostrum libero doloribus assumenda, accusantium quis fugiat cum voluptatibus temporibus esse odio ipsum ad facilis perferendis nobis voluptate quam quaerat officia laborum est. Aperiam ut",
             "vintage" : 2023,
             "alchocol"  : 12.5,
             "price" : 300
@@ -23,6 +25,7 @@
             "name":"Станушина",
             "color": "Бело",
             "image": "/malena.jpg",
+            "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit Corporis iste Dolorum inventore dicta nostrum libero doloribus assumenda, accusantium quis fugiat cum voluptatibus temporibus esse odio ipsum ad facilis perferendis nobis voluptate quam quaerat officia laborum est. Aperiam ut",
             "vintage" : 2023,
             "alchocol"  : 12.5,
             "price" : 300
@@ -32,6 +35,7 @@
             "name":"Розе",
             "color": "Бело",
             "image": "/bella.jpg",
+            "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit Corporis iste Dolorum inventore dicta nostrum libero doloribus assumenda, accusantium quis fugiat cum voluptatibus temporibus esse odio ipsum ad facilis perferendis nobis voluptate quam quaerat officia laborum est. Aperiam ut",
             "vintage" : 2023,
             "alchocol"  : 12.5,
             "price" : 300
@@ -42,6 +46,7 @@
             "name":"Смедеревка",
             "color": "Бело",
             "image": "/bella.jpg",
+            "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit Corporis iste Dolorum inventore dicta nostrum libero doloribus assumenda, accusantium quis fugiat cum voluptatibus temporibus esse odio ipsum ad facilis perferendis nobis voluptate quam quaerat officia laborum est. Aperiam ut",
             "vintage" : 2023,
             "alchocol"  : 12.5,
             "price" : 300
@@ -52,6 +57,7 @@
             "name":"Каберне Совињон",
             "color": "Бело",
             "image": "/bella.jpg",
+            "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit Corporis iste Dolorum inventore dicta nostrum libero doloribus assumenda, accusantium quis fugiat cum voluptatibus temporibus esse odio ipsum ad facilis perferendis nobis voluptate quam quaerat officia laborum est. Aperiam ut",
             "vintage" : 2023,
             "alchocol"  : 12.5,
             "price" : 300
@@ -61,6 +67,7 @@
             "name":"Рајски Ризлинг",
             "color": "Бело",
             "image": "/bella.jpg",
+            "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit Corporis iste Dolorum inventore dicta nostrum libero doloribus assumenda, accusantium quis fugiat cum voluptatibus temporibus esse odio ipsum ad facilis perferendis nobis voluptate quam quaerat officia laborum est. Aperiam ut",
             "vintage" : 2023,
             "alchocol"  : 12.5,
             "price" : 300
@@ -71,9 +78,54 @@
             "name":"Рајски Ризлинг",
             "color": "Црвено",
             "image": "/bella.jpg",
+            "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit Corporis iste Dolorum inventore dicta nostrum libero doloribus assumenda, accusantium quis fugiat cum voluptatibus temporibus esse odio ipsum ad facilis perferendis nobis voluptate quam quaerat officia laborum est. Aperiam ut",
             "vintage" : 2023,
             "alchocol"  : 12.5,
             "price" : 300
+        }
+    ],
+
+
+    "images" : [
+        {
+           "id":"78",
+            "image":"gallery1.jpg"
+        },
+        {
+           "id":"79",
+            "image":"gallery2.jpg"
+        },
+        {
+           "id":"80",
+            "image":"gallery3.jpg"
+        },
+        {
+           "id":"81",
+            "image":"gallery4.jpg"
+        },
+        {
+           "id":"82",
+            "image":"gallery5.jpg"
+        },
+        {
+           "id":"83",
+            "image":"gallery6.jpg"
+        },
+        {
+           "id":"84",
+            "image":"gallery7.jpg"
+        },
+        {
+           "id":"85",
+            "image":"gallery8.jpg"
+        },
+        {
+           "id":"86",
+            "image":"gallery9.jpg"
+        },
+        {
+           "id":"87",
+            "image":"gallery10.jpg"
         }
     ]
 }

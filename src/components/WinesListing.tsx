@@ -1,10 +1,9 @@
 import React from "react";
-import Image from "next/image";
+
 import Card, { WineProps } from "@/components/Card";
 import { fetchData } from "@/fetchData";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 
 export default function WinesListing() {
   const [wines, setWines] = useState<WineProps[]>([]);
@@ -13,7 +12,8 @@ export default function WinesListing() {
   useEffect(() => {
     const fetchDataAndSetWines = async () => {
       try {
-        const data = await fetchData();
+        const endpoint = "wines"; // Заменете го ова со вистинскиот `endpoint`
+        const data = await fetchData(endpoint);
         setWines(data);
         setFilteredWines(data);
       } catch (error) {
@@ -48,25 +48,29 @@ export default function WinesListing() {
   };
 
   return (
-    <div className="flex flex-row p-5">
-      <div className="basis-1/4 ">
-        <p className="bg-cream text-wine text-center text-3xl p-4 rounded">
-          Филтри
-        </p>
-
-        <div className="flex flex-row">
-          <button onClick={() => handleFilterClick("Бело")} className="btn">
-            Бели вина
-          </button>
-          <button onClick={() => handleFilterClick("Црвено")} className="btn">
-            Црвени вина
-          </button>
-          <button onClick={() => handleFilterClick("")} className="btn">
-            Сите вина
-          </button>
-        </div>
+    <>
+      <div className="text-center p-5 text-wine bg-cream mb-5">
+        <button
+          onClick={() => handleFilterClick("Бело")}
+          className="btn mr-10 text-3xl"
+        >
+          Бели вина
+        </button>
+        <button
+          onClick={() => handleFilterClick("Црвено")}
+          className="btn mr-10 text-3xl"
+        >
+          Црвени вина
+        </button>
+        <button
+          onClick={() => handleFilterClick("")}
+          className="btn mr-10 text-3xl"
+        >
+          Сите вина
+        </button>
       </div>
-      <div className="basis-3/4 ">
+
+      <div>
         <div className="flex flex-wrap justify-center md:justify-start lg:justify-around text-center">
           {filteredWines.map((wine: WineProps) => (
             <Card
@@ -80,6 +84,6 @@ export default function WinesListing() {
           ))}
         </div>
       </div>
-    </div>
+    </>
   );
 }

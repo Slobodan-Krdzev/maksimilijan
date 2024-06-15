@@ -1,26 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-import { Roboto, Spectral } from "next/font/google";
+import { Roboto_Condensed } from "next/font/google";
 
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
-import FooterInfo from "@/components/FooterInfo";
 
-const roboto_init = Roboto({
-  subsets: ["latin"],
-  weight: ["100", "300", "700"],
-  variable: "--font-roboto",
-});
-const montserrat_init = Roboto({
-  subsets: ["latin"],
-  weight: ["100", "300", "700"],
-  variable: "--font-montserrat_init",
-});
-const spectral_init = Spectral({
+const roboto_condensed_init = Roboto_Condensed({
   subsets: ["latin"],
   weight: ["200", "300", "700"],
-  variable: "--font-spectral_init",
+  variable: "--font-roboto_condensed",
 });
 
 export const metadata: Metadata = {
@@ -35,10 +24,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={spectral_init.variable}>
+      <body className={roboto_condensed_init.variable}>
         <NavBar />
         {children}
-        <FooterInfo />
+
         <Footer />
       </body>
     </html>

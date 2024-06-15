@@ -1,15 +1,13 @@
 "use client";
 
+import Banner from "@/components/Banner";
 import WinesListing from "@/components/WinesListing";
 
 export default function Products() {
   return (
     <>
-      <div className=" mx-auto w-72 my-5">
-        <p className="bg-wine text-white text-center text-3xl p-4 rounded">
-          Maksimilijan Family Winery
-        </p>
-      </div>
+      <Banner imageSrc="/vineyard-hills.jpg" text="Нашите вина" />
+
       <WinesListing />
     </>
   );

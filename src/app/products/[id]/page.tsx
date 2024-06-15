@@ -1,4 +1,5 @@
-import { WindeDetailProps } from "@/components/WineDetail";
+import Banner from "@/components/Banner";
+import { WineDetailProps } from "@/components/WineDetail";
 import WineDetail from "@/components/WineDetail";
 
 const WineDetails = async ({
@@ -10,7 +11,7 @@ const WineDetails = async ({
     const response = await fetch(`http://localhost:8000/wines/${params.id}`);
     const wineData = await response.json();
 
-    const addToCart = (wine: WindeDetailProps) => {
+    const addToCart = (wine: WineDetailProps) => {
       const existingItems = JSON.parse(
         localStorage.getItem("cartItems") ?? "[]"
       );
@@ -22,6 +23,8 @@ const WineDetails = async ({
 
     return (
       <>
+        <Banner imageSrc="/vineyard-hills.jpg" text="Нашите вина" />
+
         {wineData && (
           <div>
             <WineDetail
@@ -31,6 +34,7 @@ const WineDetails = async ({
               alchocol={wineData.alchocol}
               vintage={wineData.vintage}
               price={wineData.price}
+              description={wineData.description}
             />
           </div>
         )}

@@ -12,7 +12,7 @@ function NavBar() {
   return (
     <div>
       <nav className="z-10 mb-3">
-        <div className="justify-between md:items-center md:flex md:px-8 shadow shadow-md shadow-bottom shadow-wine">
+        <div className="justify-between md:items-center md:flex md:px-8">
           <div>
             <div className="flex items-center justify-between md:block">
               {/* LOGO */}
@@ -58,6 +58,15 @@ function NavBar() {
                   }`}
                 >
                   <Link href="/" className="underline-hover-effect">
+                    Почетна
+                  </Link>
+                </li>
+                <li
+                  className={`text-xl py-2 mx-1 md:px-6 text-center text-wine md:border-b-0 transition-colors duration-700 ease-in-out ${
+                    currentPath === "/aboutus" ? "active" : ""
+                  }`}
+                >
+                  <Link href="/aboutus" className="underline-hover-effect">
                     За нас
                   </Link>
                 </li>

@@ -1,13 +1,14 @@
 "use client";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 interface BannerProps {
   imageSrc: string;
   text: string;
 }
-
 const Banner: React.FC<BannerProps> = ({ imageSrc, text }) => {
+  const currentPath = usePathname();
   const [isTextVisible, setIsTextVisible] = useState(false);
 
   useEffect(() => {
@@ -19,9 +20,10 @@ const Banner: React.FC<BannerProps> = ({ imageSrc, text }) => {
   }, []);
 
   return (
-    <div className="relative h-screen">
-      {/* Слика */}
-      <div className="absolute inset-0 ">
+    <div
+      className={`relative  ${currentPath === "/" ? "h-screen " : "min-h-96"}`}
+    >
+      <div className="absolute inset-0">
         <Image
           className="opacity-80"
           src={imageSrc}
@@ -32,7 +34,6 @@ const Banner: React.FC<BannerProps> = ({ imageSrc, text }) => {
         />
       </div>
 
-      {/* Текст со анимација */}
       <div
         className={`absolute inset-0 flex justify-center items-center transition-opacity duration-1000 ${
           isTextVisible ? "opacity-100" : "opacity-0"
