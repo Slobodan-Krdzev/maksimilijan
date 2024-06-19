@@ -36,38 +36,43 @@ export default function WineDetail({
   };
 
   return (
-    <section className="flex justify-center items-start text-wine p-10 h-screen items-center">
-      <div className="w-1/3 text-start">
-        <p className="text-5xl font-bold mb-10">{name}</p>
-        <p className="text-2xl">{description}</p>
+    <section className="flex flex-col lg:flex-row justify-center items-center text-wine p-5 lg:p-10">
+      <div className="lg:w-1/3 lg:text-start mb-5 lg:mb-0">
+        <p className="text-3xl lg:text-5xl font-bold mb-5">{name}</p>
+        <p className="text-lg lg:text-2xl">{description}</p>
       </div>
-      <div className="w-1/3 items-center ">
-        <Image
-          src={image}
-          alt="ecommerce"
-          width={300} // Зголемете ја ширината
-          height={400} // Зголемете ја висината
-          layout="responsive"
-          className="h-full w-full" // Додајте класи за полна висина и ширина
-        />
+      <div className="lg:w-1/3 w-full lg:px-5">
+        <div
+          className="relative overflow-hidden rounded-lg lg:h-auto"
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
+        >
+          <Image
+            src={image}
+            alt="ecommerce"
+            width={800}
+            height={1000}
+            layout="responsive"
+            className="object-cover lg:object-contain"
+          />
+        </div>
       </div>
-      <div className="w-1/3 pl-10">
-        <div className="mb-3">
-          <p className="text-3xl font-bold">Берба</p>
-          <p className="text-2xl">{vintage}</p>
+      <div className="lg:w-1/3 lg:pl-10 grid grid-cols-2 lg:flex lg:flex-col">
+        <div className="mb-3 px-5">
+          <p className="text-xl lg:text-3xl font-bold">Берба</p>
+          <p className="text-lg lg:text-xl">{vintage}</p>
         </div>
-        <div className="mb-3">
-          <p className="text-3xl font-bold">Созревање</p>
-          <p className="text-2xl">Барик</p>
+        <div className="mb-3 px-5">
+          <p className="text-xl lg:text-3xl font-bold">Созревање</p>
+          <p className="text-lg lg:text-xl">Барик</p>
         </div>
-
-        <div className="mb-3">
-          <p className="text-3xl font-bold">Алкохол</p>
-          <p className="text-2xl">{alchocol}</p>
+        <div className="mb-3 px-5 lg:mb-0">
+          <p className="text-xl lg:text-3xl font-bold">Алкохол</p>
+          <p className="text-lg lg:text-xl">{alchocol}</p>
         </div>
-        <div className="mb-3">
-          <p className="text-3xl font-bold">Боја</p>
-          <p className="text-2xl">{color}</p>
+        <div className="mb-3 px-5">
+          <p className="text-xl lg:text-3xl font-bold">Боја</p>
+          <p className="text-lg lg:text-xl">{color}</p>
         </div>
       </div>
     </section>

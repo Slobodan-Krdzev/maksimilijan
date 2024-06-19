@@ -11,11 +11,10 @@ function NavBar() {
 
   return (
     <div>
-      <nav className="z-10 mb-3">
+      <nav className="z-10 ">
         <div className="justify-between md:items-center md:flex md:px-8">
           <div>
             <div className="flex items-center justify-between md:block">
-              {/* LOGO */}
               <Link href="/">
                 <Image
                   src="/logo_white.jpg"
@@ -24,10 +23,10 @@ function NavBar() {
                   alt="logo"
                 />
               </Link>
-              {/* HAMBURGER BUTTON FOR MOBILE */}
+
               <div className="md:hidden">
                 <button
-                  className="p-2  rounded-md outline-none focus:border-gray-400 focus:border"
+                  className="p-2 rounded-md outline-none focus:border-gray-400 focus:border"
                   onClick={() => setNavbar(!navbar)}
                 >
                   {navbar ? (
@@ -47,13 +46,15 @@ function NavBar() {
           </div>
           <div>
             <div
-              className={`flex-1 justify-self-center mt-8 md:block md:pb-0 md:mt-0 ${
-                navbar ? "p-12 md:p-0 block" : "hidden"
+              className={`flex-1 justify-self-center text-wine md:block md:pb-0 md:mt-0 bg-cream md:bg-white transition-all duration-700 ease-in-out ${
+                navbar
+                  ? "max-h-screen opacity-100"
+                  : "max-h-0 opacity-0 md:opacity-100 md:max-h-screen"
               }`}
             >
-              <ul className="h-screen md:h-auto items-center justify-center md:flex ">
+              <ul className="items-center justify-center md:flex">
                 <li
-                  className={`text-xl py-2 mx-1 md:px-6 text-center text-wine md:border-b-0 transition-colors duration-700 ease-in-out ${
+                  className={`text-xl py-2 mx-1 md:px-6 text-center md:border-b-0 transition-colors duration-700 ease-in-out ${
                     currentPath === "/" ? "active" : ""
                   }`}
                 >
@@ -62,7 +63,7 @@ function NavBar() {
                   </Link>
                 </li>
                 <li
-                  className={`text-xl py-2 mx-1 md:px-6 text-center text-wine md:border-b-0 transition-colors duration-700 ease-in-out ${
+                  className={`text-xl py-2 mx-1 md:px-6 text-center md:border-b-0 transition-colors duration-700 ease-in-out ${
                     currentPath === "/aboutus" ? "active" : ""
                   }`}
                 >
@@ -71,7 +72,7 @@ function NavBar() {
                   </Link>
                 </li>
                 <li
-                  className={`text-xl py-2 mx-1 md:px-6 text-center text-wine md:border-b-0 transition-colors duration-700 ease-in-out  ${
+                  className={`text-xl py-2 mx-1 md:px-6 text-center md:border-b-0 transition-colors duration-700 ease-in-out  ${
                     currentPath === "/products" ? "active" : ""
                   }`}
                 >
@@ -80,7 +81,7 @@ function NavBar() {
                   </Link>
                 </li>
                 <li
-                  className={`text-xl py-2 mx-1 md:px-6 text-center text-wine md:border-b-0 transition-colors duration-700 ease-in-out ${
+                  className={`text-xl py-2 mx-1 md:px-6 text-center md:border-b-0 transition-colors duration-700 ease-in-out ${
                     currentPath === "/nagradi" ? "active" : ""
                   }`}
                 >
@@ -89,7 +90,7 @@ function NavBar() {
                   </Link>
                 </li>
                 <li
-                  className={`text-xl py-2 mx-1 md:px-6 text-center text-wine md:border-b-0 transition-colors duration-700 ease-in-out ${
+                  className={`text-xl py-2 mx-1 md:px-6 text-center md:border-b-0 transition-colors duration-700 ease-in-out ${
                     currentPath === "/smestuvanje" ? "active" : ""
                   }`}
                 >
@@ -98,7 +99,7 @@ function NavBar() {
                   </Link>
                 </li>
                 <li
-                  className={`text-xl py-2 mx-1 md:px-6 text-center text-wine md:border-b-0 transition-colors duration-700 ease-in-out ${
+                  className={`text-xl py-2 mx-1 md:px-6 text-center md:border-b-0 transition-colors duration-700 ease-in-out ${
                     currentPath === "/contact" ? "active" : ""
                   }`}
                 >
@@ -108,9 +109,6 @@ function NavBar() {
                 </li>
               </ul>
             </div>
-          </div>
-          <div className="hidden md:block">
-            <Link href={"/addtocart"}>Cart </Link>
           </div>
         </div>
       </nav>

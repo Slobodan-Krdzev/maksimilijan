@@ -127,5 +127,128 @@
            "id":"87",
             "image":"gallery10.jpg"
         }
+    ],
+
+    "smestuvanje": [
+    {
+      "id":"333",
+      "name": "Соба Изабела",
+      "description": "Соба Изабела располага со најмодерни удобности. Уживајте во пространа светла соба со комфорен кревет, приватна бања, бесплатен Wi-Fi, клима уред и телевизор. Идеална за деловни патници и туристи. На одлична локација, во село Пепелиште, Неготино. Уживајте во престојот",
+      "location": "с. Пепелиште, Неготино",
+      "price": 30,
+      "mainImage": "/izabela.jpg",
+      "images": [
+        "room1.jpg",
+        "room2.jpg",
+        "room3.jpg",
+        "room4.jpg",
+        "room5.jpg",
+        "room6.jpg"
+   
+      ]
+      
+    },
+    {
+      "id": "222",
+      "name": "Соба Максимилијан",
+      "description": "Соба Максимилијан располага со најмодерни удобности. Уживајте во пространа светла соба со комфорен кревет, приватна бања, бесплатен Wi-Fi, клима уред и телевизор. Идеална за деловни патници и туристи. На одлична локација, во село Пепелиште, Неготино. Уживајте во престојот",
+      "location": "с. Пепелиште, Неготино",
+      "price": 30,
+     "mainImage": "/maksimilijan.jpg",
+      "images": [
+        "room1.jpg",
+        "room2.jpg",
+        "room3.jpg",
+        "room4.jpg",
+        "room5.jpg",
+        "room6.jpg"
+      ]
+    },
+    {
+      "id": "444",
+      "name": "Соба Пепелиште",
+      "description": "Соба Пепелиште располага со најмодерни удобности. Уживајте во пространа светла соба со комфорен кревет, приватна бања, бесплатен Wi-Fi, клима уред и телевизор. Идеална за деловни патници и туристи. На одлична локација, во село Пепелиште, Неготино. Уживајте во престојот",
+      "location": "с. Пепелиште, Неготино",
+      "price": 30,
+     "mainImage": "/room3.jpg",
+      "images": [
+        "room1.jpg",
+        "room2.jpg",
+        "room3.jpg",
+        "room4.jpg",
+        "room5.jpg",
+        "room6.jpg"
+      ]
+    }
+    
+
+  ],
+  "awards" : [
+        {
+           "id":"awards",
+            "image":"awards.jpg"
+        },
+        {
+           "id":"biwc",
+            "image":"biwc.jpg"
+        },
+        {
+           "id":"blagodarnica",
+            "image":"blagodarnica.jpg"
+        },
+        {
+           "id":"masoowinnermaker",
+            "image":"masoowinnermaker.jpg"
+        },
+        {
+           "id":"medal",
+            "image":"medal.jpg"
+        },
+        {
+           "id":"mladovino2021",
+            "image":"mladovino2021.jpg"
+        },
+        {
+           "id":"mladovino2022",
+            "image":"mladovino2022.jpg"
+        },
+        {
+           "id":"mladovino2022frank",
+            "image":"mladovino2022frank.jpg"
+        },
+        {
+           "id":"mladovino2022rizling",
+            "image":"mladovino2022rizling.jpg"
+        },
+        {
+           "id":"negotino2021",
+            "image":"negotino2021.jpg"
+        }
+        ,
+        {
+           "id":"popovo",
+            "image":"popovo.jpg"
+        }
+        ,
+        {
+           "id":"rotary",
+            "image":"rotary.jpg"
+        },
+        {
+           "id":"sertifikatnegotino",
+            "image":"sertifikatnegotino.jpg"
+        },
+        {
+           "id":"silvermedal",
+            "image":"silvermedal.jpg"
+        },
+        {
+           "id":"trofej",
+            "image":"trofej.jpg"
+        },
+        {
+           "id":"zlatn",
+            "image":"zlatn.jpg"
+        }
     ]
 }

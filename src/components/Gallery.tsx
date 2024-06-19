@@ -4,10 +4,12 @@ import Image from "next/image";
 export const Gallery = () => {
   return (
     <>
-      <p className="text-5xl text-wine text-center mb-5 font-bold">ГАЛЕРИЈА</p>
+      <p className="text-3xl md:text-5xl text-wine text-center mb-5 font-bold">
+        ГАЛЕРИЈА
+      </p>
       <div className="h-screen">
         <div className="grid grid-cols-2 md:grid-cols-3 grid-rows-3 md:grid-rows-4 gap-4 h-5/6 w-4/5 mx-auto">
-          <div className="bg-indigo-100 row-span-1 md:row-span-2 relative">
+          <div className="row-span-1 md:row-span-2 relative">
             <Image
               src="/bottles.jpg"
               alt="card-image"
@@ -37,6 +39,7 @@ export const Gallery = () => {
               alt="card-image"
               layout="fill"
               objectFit="cover"
+              loading="lazy"
             />
           </div>
           <div className="bg-sky-100 row-span-1 md:row-span-2 col-span-1 md:col-span-2 relative">
@@ -58,7 +61,7 @@ export const Gallery = () => {
         </div>
       </div>
       <div className="text-center">
-        <button className="border px-8 py-5 border-wine text-xl hover:bg-wine hover:text-white transition duration-300 ease-in-out  mb-5">
+        <button className="border px-6 py-3 md:px-8 md:py-5 border-wine text-lg md:text-xl hover:bg-wine hover:text-white transition duration-300 ease-in-out mb-10">
           <a href="/gallery">Оди кон галерија</a>
         </button>
       </div>

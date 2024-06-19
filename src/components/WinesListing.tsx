@@ -12,7 +12,7 @@ export default function WinesListing() {
   useEffect(() => {
     const fetchDataAndSetWines = async () => {
       try {
-        const endpoint = "wines"; // Заменете го ова со вистинскиот `endpoint`
+        const endpoint = "wines";
         const data = await fetchData(endpoint);
         setWines(data);
         setFilteredWines(data);
@@ -49,29 +49,29 @@ export default function WinesListing() {
 
   return (
     <>
-      <div className="text-center p-5 text-wine bg-cream mb-5">
+      <div className="text-center p-5 text-wine bg-cream mb-5 flex flex-wrap justify-center">
         <button
           onClick={() => handleFilterClick("Бело")}
-          className="btn mr-10 text-3xl"
+          className="btn mr-2 mb-2 md:mr-5 md:mb-0 text-2xl md:text-3xl"
         >
           Бели вина
         </button>
         <button
           onClick={() => handleFilterClick("Црвено")}
-          className="btn mr-10 text-3xl"
+          className="btn mr-2 mb-2 md:mr-5 md:mb-0 text-2xl md:text-3xl"
         >
           Црвени вина
         </button>
         <button
           onClick={() => handleFilterClick("")}
-          className="btn mr-10 text-3xl"
+          className="btn mr-2 mb-2 md:mr-5 md:mb-0 text-2xl md:text-3xl"
         >
           Сите вина
         </button>
       </div>
 
       <div>
-        <div className="flex flex-wrap justify-center md:justify-start lg:justify-around text-center">
+        <div className="flex flex-wrap justify-center justify-around text-center">
           {filteredWines.map((wine: WineProps) => (
             <Card
               key={wine.id}

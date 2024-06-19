@@ -21,13 +21,14 @@ function Card({
 }: WineProps) {
   return (
     <div className="relative text-wine bg-white shadow-md bg-clip-border rounded-lg w-80 mb-12 transform transition duration-500 hover:scale-110">
-      <div className="relative rounded-t-lg overflow-hidden text-gray-700 bg-white bg-clip-border  h-64 ">
+      <div className="relative rounded-t-lg overflow-hidden text-gray-700 bg-white bg-clip-border h-64 ">
         <Image
           src={`${image}`}
           alt="card-image"
           width={600}
           height={400}
           layout="responsive"
+          loading="lazy"
         />
       </div>
       <div className="p-6">

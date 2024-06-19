@@ -7,7 +7,7 @@ export default function Gallery() {
   return (
     <>
       <Banner imageSrc="/outdoor.jpg" text="Галерија" />
-      <GalleryListing />
+      <GalleryListing endpoint="images" title="ГАЛЕРИЈА" />
     </>
   );
 }

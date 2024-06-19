@@ -9,9 +9,9 @@ export default function Contact() {
     <>
       <Banner imageSrc="/vizba.jpg" text="Taste the Wine!" />
       <Form />
-      <div className="flex p-5">
-        <div className="w-1/2 bg-wine text-cream p-10 m-2">
-          <p className="text-5xl">Контакт</p>
+      <div className="flex flex-col justify-between md:flex-row p-5">
+        <div className="w-full mb-5 sm:mb-0 bg-wine text-cream p-10 mr-2">
+          <p className="text-2xl md:text-5xl">Контакт</p>
           <div className="py-5 text-2xl">
             <p>Maksimilihan Famili Winery</p>
             <p>с. Пепелиште</p>
@@ -29,8 +29,8 @@ export default function Contact() {
             </span>
           </div>
 
-          <div className="py-5  flex">
-            <span className="text-5xl">
+          <div className="py-5 flex">
+            <span className="text-2xl md:text-5xl">
               <a
                 href="https://www.facebook.com/profile.php?id=100064194423358"
                 target="_blank"
@@ -40,9 +40,9 @@ export default function Contact() {
                 <FaFacebook />
               </a>
             </span>
-            <span className="mx-2 text-5xl">
+            <span className="text-2xl md:text-5xl">
               <a
-                href="https:www.instagram.com/maksimilijan.family.winery/"
+                href="https://www.instagram.com/maksimilijan.family.winery/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center"
@@ -52,7 +52,7 @@ export default function Contact() {
             </span>
           </div>
         </div>
-        <div className="w-1/2 p-5">
+        <div className="w-full">
           <Map />
         </div>
       </div>
