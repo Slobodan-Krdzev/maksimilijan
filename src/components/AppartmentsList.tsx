@@ -2,8 +2,9 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { RoomDetailProps } from "./RoomsDetails";
+
 import { fetchData } from "@/fetchData";
+import { RoomDetailProps } from "@/interface/type";
 
 export const AppartmentsList = () => {
   const [rooms, setRooms] = useState<RoomDetailProps[]>([]);

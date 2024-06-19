@@ -1,12 +1,9 @@
 "use client";
+import { BannerProps } from "@/interface/type";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-interface BannerProps {
-  imageSrc: string;
-  text: string;
-}
 const Banner: React.FC<BannerProps> = ({ imageSrc, text }) => {
   const currentPath = usePathname();
   const [isTextVisible, setIsTextVisible] = useState(false);

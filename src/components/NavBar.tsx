@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import NavItem from "./NavItem";
 
 function NavBar() {
   const [navbar, setNavbar] = useState(false);
@@ -53,60 +54,39 @@ function NavBar() {
               }`}
             >
               <ul className="items-center justify-center md:flex">
-                <li
-                  className={`text-xl py-2 mx-1 md:px-6 text-center md:border-b-0 transition-colors duration-700 ease-in-out ${
-                    currentPath === "/" ? "active" : ""
-                  }`}
-                >
-                  <Link href="/" className="underline-hover-effect">
-                    Почетна
-                  </Link>
-                </li>
-                <li
-                  className={`text-xl py-2 mx-1 md:px-6 text-center md:border-b-0 transition-colors duration-700 ease-in-out ${
-                    currentPath === "/aboutus" ? "active" : ""
-                  }`}
-                >
-                  <Link href="/aboutus" className="underline-hover-effect">
-                    За нас
-                  </Link>
-                </li>
-                <li
-                  className={`text-xl py-2 mx-1 md:px-6 text-center md:border-b-0 transition-colors duration-700 ease-in-out  ${
-                    currentPath === "/products" ? "active" : ""
-                  }`}
-                >
-                  <Link href="/products" className="underline-hover-effect">
-                    Производи
-                  </Link>
-                </li>
-                <li
-                  className={`text-xl py-2 mx-1 md:px-6 text-center md:border-b-0 transition-colors duration-700 ease-in-out ${
-                    currentPath === "/nagradi" ? "active" : ""
-                  }`}
-                >
-                  <Link href="/nagradi" className="underline-hover-effect">
-                    Награди
-                  </Link>
-                </li>
-                <li
-                  className={`text-xl py-2 mx-1 md:px-6 text-center md:border-b-0 transition-colors duration-700 ease-in-out ${
-                    currentPath === "/smestuvanje" ? "active" : ""
-                  }`}
-                >
-                  <Link href="/smestuvanje" className="underline-hover-effect">
-                    Сместување
-                  </Link>
-                </li>
-                <li
-                  className={`text-xl py-2 mx-1 md:px-6 text-center md:border-b-0 transition-colors duration-700 ease-in-out ${
-                    currentPath === "/contact" ? "active" : ""
-                  }`}
-                >
-                  <Link href="/contact" className="underline-hover-effect">
-                    Контакт
-                  </Link>
-                </li>
+                <NavItem
+                  href={"/"}
+                  label={"Почетна"}
+                  isActive={currentPath === "/"}
+                />
+                <NavItem
+                  href={"/aboutus"}
+                  label={"За нас"}
+                  isActive={currentPath === "/aboutus"}
+                />
+
+                <NavItem
+                  href={"/products"}
+                  label={"Производи"}
+                  isActive={currentPath === "/products"}
+                />
+                <NavItem
+                  href={"/nagradi"}
+                  label={"Награди"}
+                  isActive={currentPath === "/nagradi"}
+                />
+
+                <NavItem
+                  href={"/smestuvanje"}
+                  label={"Сместување"}
+                  isActive={currentPath === "/smestuvanje"}
+                />
+
+                <NavItem
+                  href={"/contact"}
+                  label={"Контакт"}
+                  isActive={currentPath === "/contact"}
+                />
               </ul>
             </div>
           </div>

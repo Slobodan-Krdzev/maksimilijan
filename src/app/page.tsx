@@ -13,7 +13,6 @@ export default function Home() {
       <Citat />
       <AboutSection reverse={true} image="/bottles.jpg" />
       <FooterInfo />
-      {/* <Map /> */}
     </>
   );
 }

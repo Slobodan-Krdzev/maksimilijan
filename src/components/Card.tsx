@@ -1,15 +1,6 @@
+import { WineProps } from "@/interface/type";
 import Image from "next/image";
 import Link from "next/link";
-
-export interface WineProps {
-  id: string;
-  name: string;
-  color: string;
-  image: string;
-  description?: string;
-
-  addCardToShop: () => void;
-}
 
 function Card({
   id,

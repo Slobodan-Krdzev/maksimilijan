@@ -28,7 +28,6 @@ export default function Form() {
       // Success handling
       alert("Вашата порака е испратена!");
     } else {
-      // Error handling
       alert("Грешка при испраќање на пораката.");
     }
     setFormData({

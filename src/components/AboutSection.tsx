@@ -1,8 +1,5 @@
+import { AboutSectionProps } from "@/interface/type";
 import Image from "next/image";
-type AboutSectionProps = {
-  reverse?: boolean;
-  image: string;
-};
 
 function AboutSection({ reverse = false, image }: AboutSectionProps) {
   return (

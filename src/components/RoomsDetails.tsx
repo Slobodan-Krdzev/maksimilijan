@@ -1,15 +1,10 @@
 "use client";
+import { RoomDetailProps } from "@/interface/type";
 import Image from "next/image";
 import { useState } from "react";
-export interface RoomDetailProps {
-  id: string;
-  name: string;
-  mainImage: string;
-  description?: string;
-  location?: string;
-  price?: number;
-  images?: [];
-}
+import { ComfortZone } from "./ComfortZone";
+import ImageModal from "./ImageModal";
+
 const RoomDetails = ({
   id,
   name,
@@ -28,6 +23,7 @@ const RoomDetails = ({
   const handleCloseModal = () => {
     setSelectedImage(null);
   };
+
   return (
     <>
       <div className="mx-auto px-4 py-8 text-wine">
@@ -63,26 +59,11 @@ const RoomDetails = ({
         <div className="container mx-auto px-4 py-8 mb-8 text-center bg-cream">
           <h2 className="text-2xl font-bold mb-4">Комфорт зона</h2>
           <div className="flex flex-wrap justify-center">
-            <div className="flex items-center space-x-2 px-5 mb-4 md:mb-0">
-              <span className="text-2xl">&#128719;</span>
-              <span className="text-2xl">3 лица</span>
-            </div>
-            <div className="flex items-center space-x-2 px-5 mb-4 md:mb-0">
-              <span className="text-2xl">&#128705;</span>
-              <span className="text-2xl">Бања</span>
-            </div>
-            <div className="flex items-center space-x-2 px-5 mb-4 md:mb-0">
-              <span className="text-2xl">&#128246;</span>
-              <span className="text-2xl">Free wifi</span>
-            </div>
-            <div className="flex items-center space-x-2 px-5 mb-4 md:mb-0">
-              <span className="text-2xl">&#127969;</span>
-              <span className="text-2xl">Тераса</span>
-            </div>
-            <div className="flex items-center space-x-2 px-5 mb-4 md:mb-0">
-              <span className="text-2xl">&#127359;</span>
-              <span className="text-2xl">Паркинг</span>
-            </div>
+            <ComfortZone comfort={"🛏️"} desc={`3 лица`} />
+            <ComfortZone comfort={"🛁"} desc={`Бања`} />
+            <ComfortZone comfort={"🛜"} desc={`Free wifi`} />
+            <ComfortZone comfort={"🏠"} desc={`Тераса`} />
+            <ComfortZone comfort={"🅿️"} desc={`Паркинг`} />
           </div>
         </div>
 
@@ -110,25 +91,7 @@ const RoomDetails = ({
             </div>
 
             {selectedImage && (
-              <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
-                <div className="relative bg-white rounded-lg shadow-lg">
-                  <button
-                    className="absolute top-0 right-0 m-4 p-2 font-bold text-wine bg-cream"
-                    onClick={handleCloseModal}
-                  >
-                    &times;
-                  </button>
-                  <div className="p-4">
-                    <Image
-                      src={`/${selectedImage}`}
-                      alt="Selected image"
-                      width={500}
-                      height={500}
-                      className="rounded-lg"
-                    />
-                  </div>
-                </div>
-              </div>
+              <ImageModal image={selectedImage} onClose={handleCloseModal} />
             )}
           </div>
         </div>

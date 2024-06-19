@@ -2,16 +2,8 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { fetchData } from "@/fetchData";
 import { usePathname } from "next/navigation";
-
-export interface ImageProps {
-  id: number;
-  image: string;
-}
-
-interface GalleryListingProps {
-  endpoint: string;
-  title: string;
-}
+import { GalleryListingProps, ImageProps } from "@/interface/type";
+import ImageModal from "./ImageModal";
 
 export const GalleryListing: React.FC<GalleryListingProps> = ({
   endpoint,
@@ -74,25 +66,7 @@ export const GalleryListing: React.FC<GalleryListingProps> = ({
         </div>
 
         {selectedImage && (
-          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
-            <div className="relative bg-white rounded-lg shadow-lg">
-              <button
-                className="absolute top-0 right-0 m-4 p-2 font-bold text-wine bg-cream"
-                onClick={handleCloseModal}
-              >
-                &times;
-              </button>
-              <div className="p-4">
-                <Image
-                  src={getImageSrc(selectedImage)}
-                  alt="Selected image"
-                  width={500}
-                  height={500}
-                  className="rounded-lg"
-                />
-              </div>
-            </div>
-          </div>
+          <ImageModal image={selectedImage} onClose={handleCloseModal} />
         )}
       </div>
     </>
