@@ -29,13 +29,6 @@ function Card({
       </div>
 
       <div className="py-3 flex">
-        {/* <button
-          onClick={addCardToShop}
-          className="bg-wine hover:bg-cream text-cream font-semibold hover:text-wine p-2 hover:border-transparent rounded"
-        >
-          кошничка
-        </button> */}
-
         <Link href={`/products/${id}`} className="w-full max-w-96">
           <button className="border px-10 py-3 border-wine text-xl hover:bg-wine hover:text-white transition duration-300 ease-in-out">
             детали
