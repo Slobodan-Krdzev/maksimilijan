@@ -1,8 +1,5 @@
-import React from "react";
-
 import Card from "@/components/Card";
 import { fetchData } from "@/fetchData";
-
 import { useEffect, useState } from "react";
 import { WineProps } from "@/interface/type";
 import FilterButton from "./FilterButton";

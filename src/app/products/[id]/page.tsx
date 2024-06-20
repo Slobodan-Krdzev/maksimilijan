@@ -10,16 +10,6 @@ const WineDetails = async ({
     const response = await fetch(`http://localhost:8000/wines/${params.id}`);
     const wineData = await response.json();
 
-    // const addToCart = (wine: WineDetailProps) => {
-    //   const existingItems = JSON.parse(
-    //     localStorage.getItem("cartItems") ?? "[]"
-    //   );
-
-    //   const updatedItems = [...existingItems, wine];
-
-    //   localStorage.setItem("cartItems", JSON.stringify(updatedItems));
-    // };
-
     return (
       <>
         <Banner imageSrc="/vineyard-hills.jpg" text="Нашите вина" />
