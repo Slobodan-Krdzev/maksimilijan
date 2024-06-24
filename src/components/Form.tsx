@@ -31,7 +31,7 @@ export default function Form() {
           from_number: formData.phone,
           from_email: formData.email,
         },
-        "user_Zksn-ca2vf4y5qVua"
+        "k7L6BS57GgSOHzd4O"
       );
       console.log(formData.name);
       alert("Вашата порака е испратена!");
