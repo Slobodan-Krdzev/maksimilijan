@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
 import { Roboto_Condensed } from "next/font/google";
-
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 
@@ -30,7 +28,6 @@ export default function RootLayout({
       <body className={roboto_condensed_init.variable}>
         <NavBar />
         {children}
-
         <Footer />
       </body>
     </html>

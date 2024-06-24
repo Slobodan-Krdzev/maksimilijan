@@ -1,8 +1,10 @@
 "use client";
-import { WineDetailProps } from "@/interface/type";
+import { CartItem, WineDetailProps } from "@/interface/type";
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import { WineDesc } from "./WineDesc";
+import { addToCart } from "@/utils/localStorage";
+import router from "next/router";
 
 export default function WineDetail({
   image,
@@ -13,6 +15,20 @@ export default function WineDetail({
   description,
   price,
 }: WineDetailProps) {
+  const handleAddToCart = () => {
+    const product: CartItem = {
+      image,
+      name,
+      color,
+      vintage,
+      alchocol,
+      description,
+      price,
+    };
+    addToCart(product);
+    alert("Product added to cart!");
+  };
+
   return (
     <section className="flex flex-col lg:flex-row justify-center items-center text-wine p-5 lg:p-10">
       <div className="lg:w-1/3 lg:text-start mb-5 lg:mb-0">
@@ -36,6 +52,13 @@ export default function WineDetail({
         <WineDesc desc="Созревање" result="Барик" />
         <WineDesc desc="Алкохол" result={alchocol} />
         <WineDesc desc="Боја" result={color} />
+
+        <button
+          className="border px-6 py-3 md:px-4 md:py-2 border-wine text-lg md:text-xl hover:bg-wine hover:text-white transition duration-300 ease-in-out"
+          onClick={handleAddToCart}
+        >
+          додади во 🛒
+        </button>
       </div>
     </section>
   );

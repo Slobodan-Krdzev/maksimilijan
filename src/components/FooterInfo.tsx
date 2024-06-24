@@ -22,7 +22,7 @@ function FooterInfo() {
           href="/contact"
           className="py-5 border px-8 py-5 border-wine text-xl hover:bg-wine hover:text-white transition duration-300 ease-in-out"
         >
-          Резервирај
+          Резервирај Дегустација
         </a>
       </div>
     </footer>

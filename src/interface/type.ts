@@ -36,10 +36,12 @@ export interface RoomDetailProps {
 }
 
 export interface WineDetailProps {
+  id?: string,
   image: string;
   name: string;
   description: string;
   color: string;
+ 
   vintage: number;
   alchocol: number;
   price: number;
@@ -63,4 +65,11 @@ export interface FilterButtonProps {
 export interface ImageModalProps {
   image: string;
   onClose: () => void;
+}
+
+
+
+export interface CartItem extends WineDetailProps {
+  quantity?: number;
+   liter?: string;
 }
