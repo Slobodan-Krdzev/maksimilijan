@@ -1,10 +1,10 @@
 "use client";
 import { CartItem, WineDetailProps } from "@/interface/type";
 import Image from "next/image";
-import React from "react";
+import React, { useState, Fragment } from "react";
 import { WineDesc } from "./WineDesc";
 import { addToCart } from "@/utils/localStorage";
-import router from "next/router";
+import { Dialog, Transition } from "@headlessui/react";
 
 export default function WineDetail({
   image,
@@ -15,6 +15,16 @@ export default function WineDetail({
   description,
   price,
 }: WineDetailProps) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
   const handleAddToCart = () => {
     const product: CartItem = {
       image,
@@ -26,7 +36,7 @@ export default function WineDetail({
       price,
     };
     addToCart(product);
-    alert("Product added to cart!");
+    openModal();
   };
 
   return (
@@ -43,7 +53,8 @@ export default function WineDetail({
             width={800}
             height={1000}
             layout="responsive"
-            className="object-cover lg:object-contain"
+            className="object-cover lg:object-contain "
+            style={{ maxHeight: 500 }}
           />
         </div>
       </div>
@@ -60,6 +71,59 @@ export default function WineDetail({
           додади во 🛒
         </button>
       </div>
+      <Transition appear show={isOpen} as={Fragment}>
+        <Dialog as="div" className="relative z-10" onClose={closeModal}>
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="fixed inset-0 bg-black bg-opacity-25" />
+          </Transition.Child>
+
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex min-h-full items-center justify-center p-4 text-center">
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
+                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                  <Dialog.Title
+                    as="h3"
+                    className="text-lg font-medium leading-6 text-gray-900"
+                  >
+                    Продуктот е додаден во кошничката!
+                  </Dialog.Title>
+                  <div className="mt-2">
+                    <p className="text-sm text-wine">
+                      <b>{name}</b> е успешно додаден во вашата кошничка.
+                    </p>
+                  </div>
+
+                  <div className="mt-4">
+                    <button
+                      type="button"
+                      className="inline-flex justify-center rounded-md border border-transparent bg-cream px-4 py-2 text-sm font-medium text-wine hover:bg-cream-200 focus:outline-none focus-visible:ring-2 f"
+                      onClick={closeModal}
+                    >
+                      Затвори
+                    </button>
+                  </div>
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
+        </Dialog>
+      </Transition>
     </section>
   );
 }

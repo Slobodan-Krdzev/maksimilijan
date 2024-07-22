@@ -164,7 +164,7 @@ const CartPage: React.FC = () => {
                 </p>
                 <Link href={"/checkout"}>
                   <button className="w-full bg-red-500 text-white py-2 mt-3">
-                    Продолжи со плаќање
+                    Продолжи со нарачка
                   </button>
                 </Link>
                 <Link
