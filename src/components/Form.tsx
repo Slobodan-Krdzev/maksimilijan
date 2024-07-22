@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import emailjs from "emailjs-com";
 
 export default function Form() {
   const [formData, setFormData] = useState({
@@ -17,36 +16,6 @@ export default function Form() {
     });
   };
 
-  const handleSubmit = async (e: any) => {
-    e.preventDefault();
-    try {
-      await emailjs.send(
-        "service_p795m4m",
-        "template_i70lpn6",
-        {
-          ...formData,
-          to_email: "denitrajkov23@yahoo.com",
-          to_name: "Ивица",
-          from_name: formData.name,
-          from_number: formData.phone,
-          from_email: formData.email,
-        },
-        "k7L6BS57GgSOHzd4O"
-      );
-      console.log(formData.name);
-      alert("Вашата порака е испратена!");
-    } catch (error) {
-      console.error("Грешка при испраќање на пораката:", error);
-      alert("Грешка при испраќање на пораката.");
-    }
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      message: "",
-    });
-  };
-
   return (
     <div className="p-5">
       <div className="bg-cream">
@@ -58,7 +27,7 @@ export default function Form() {
             Пополнете ги податоците за Вас и Вашата нарачка. Нашиот тим ќе ве
             исконтактира веднаш со цел да се потврди нарачката. Taste the Wine!
           </p>
-          <form className="space-y-8" onSubmit={handleSubmit}>
+          <form className="space-y-8">
             <div>
               <label className="block mb-2 text-sm font-medium text-wine">
                 Вашиот email
