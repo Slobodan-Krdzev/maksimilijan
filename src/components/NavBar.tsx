@@ -12,39 +12,37 @@ function NavBar() {
 
   return (
     <div>
-      <nav className="z-10 ">
-        <div className="justify-between md:items-center md:flex md:px-8">
-          <div>
-            <div className="flex items-center justify-between md:block">
-              <Link href="/">
-                <Image
-                  src="/logo_white.jpg"
-                  width={100}
-                  height={100}
-                  alt="logo"
-                />
-              </Link>
-
-              <div className="md:hidden">
-                <button
-                  className="p-2 rounded-md outline-none focus:border-gray-400 focus:border"
-                  onClick={() => setNavbar(!navbar)}
-                >
-                  {navbar ? (
-                    <Image src="/close.svg" width={30} height={30} alt="logo" />
-                  ) : (
-                    <Image
-                      src="/hamburger-menu.svg"
-                      width={30}
-                      height={30}
-                      alt="logo"
-                      className="focus:border-none active:border-none"
-                    />
-                  )}
-                </button>
-              </div>
+      <nav className="z-10">
+        <div className="flex items-center justify-between md:items-center md:flex md:px-8">
+          <div className="flex items-center">
+            <Link href="/">
+              <Image
+                src="/logo_white.jpg"
+                width={100}
+                height={100}
+                alt="logo"
+              />
+            </Link>
+            <div className="md:hidden ml-2">
+              <button
+                className="p-2 rounded-md outline-none focus:border-gray-400 focus:border"
+                onClick={() => setNavbar(!navbar)}
+              >
+                {navbar ? (
+                  <Image src="/close.svg" width={30} height={30} alt="logo" />
+                ) : (
+                  <Image
+                    src="/hamburger-menu.svg"
+                    width={30}
+                    height={30}
+                    alt="logo"
+                    className="focus:border-none active:border-none"
+                  />
+                )}
+              </button>
             </div>
           </div>
+          <div className="md:hidden flex-grow"></div>
           <div>
             <div
               className={`flex-1 justify-self-center text-wine md:block md:pb-0 md:mt-0 bg-cream md:bg-white transition-all duration-700 ease-in-out ${
@@ -64,7 +62,6 @@ function NavBar() {
                   label={"За нас"}
                   isActive={currentPath === "/aboutus"}
                 />
-
                 <NavItem
                   href={"/products"}
                   label={"Производи"}
@@ -75,13 +72,11 @@ function NavBar() {
                   label={"Награди"}
                   isActive={currentPath === "/nagradi"}
                 />
-
                 <NavItem
                   href={"/smestuvanje"}
                   label={"Сместување"}
                   isActive={currentPath === "/smestuvanje"}
                 />
-
                 <NavItem
                   href={"/contact"}
                   label={"Контакт"}
@@ -90,7 +85,7 @@ function NavBar() {
               </ul>
             </div>
           </div>
-          <div className="flex justify-center md:justify-start w-full md:w-auto">
+          <div className="flex items-center">
             <Link
               href={"/addtocart"}
               className={`text-xl py-2 mx-1 md:px-6 text-center md:border-b-0 transition-colors duration-700 ease-in-out `}
