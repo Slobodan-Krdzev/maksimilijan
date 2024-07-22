@@ -90,7 +90,7 @@ function NavBar() {
               </ul>
             </div>
           </div>
-          <div>
+          <div className="flex justify-center md:justify-start w-full md:w-auto">
             <Link
               href={"/addtocart"}
               className={`text-xl py-2 mx-1 md:px-6 text-center md:border-b-0 transition-colors duration-700 ease-in-out `}
