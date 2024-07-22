@@ -12,7 +12,7 @@ function NavBar() {
 
   return (
     <div>
-      <nav className="z-10 ">
+      <nav className="z-10">
         <div className="justify-between md:items-center md:flex md:px-8">
           <div>
             <div className="flex items-center justify-between md:block">
@@ -64,7 +64,6 @@ function NavBar() {
                   label={"За нас"}
                   isActive={currentPath === "/aboutus"}
                 />
-
                 <NavItem
                   href={"/products"}
                   label={"Производи"}
@@ -75,13 +74,11 @@ function NavBar() {
                   label={"Награди"}
                   isActive={currentPath === "/nagradi"}
                 />
-
                 <NavItem
                   href={"/smestuvanje"}
                   label={"Сместување"}
                   isActive={currentPath === "/smestuvanje"}
                 />
-
                 <NavItem
                   href={"/contact"}
                   label={"Контакт"}
