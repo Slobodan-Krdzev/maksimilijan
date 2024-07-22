@@ -8,7 +8,7 @@ const RoomDetails = async ({
 }) => {
   try {
     const response = await fetch(
-      `http://localhost:8000/smestuvanje/${params.id}`
+      `https://maksimilijan-wine--room.glitch.me/smestuvanje/${params.id}`
     );
     const roomData = await response.json();
 
