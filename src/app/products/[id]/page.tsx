@@ -7,7 +7,9 @@ const WineDetails = async ({
   params: { id: string; name: string };
 }) => {
   try {
-    const response = await fetch(`http://localhost:8000/wines/${params.id}`);
+    const response = await fetch(
+      `https://maksimilijan-wine--room.glitch.me/wines/${params.id}`
+    );
     const wineData = await response.json();
 
     return (
