@@ -1,29 +1,50 @@
 import Card from "@/components/Card";
+import { fetchData } from "@/fetchData";
 import { useEffect, useState } from "react";
 import { WineProps } from "@/interface/type";
 import FilterButton from "./FilterButton";
-import { useRouter } from "next/router";
 
-export default function WinesListing({ wines }: { wines: WineProps[] }) {
-  const [filteredWines, setFilteredWines] = useState<WineProps[]>(wines);
-  const router = useRouter();
+export default function WinesListing() {
+  const [wines, setWines] = useState<WineProps[]>([]);
+  const [filteredWines, setFilteredWines] = useState<WineProps[]>([]);
+
+  useEffect(() => {
+    const fetchDataAndSetWines = async () => {
+      try {
+        const endpoint = "wines";
+        const data = await fetchData(endpoint);
+        setWines(data);
+        setFilteredWines(data);
+      } catch (error) {
+        console.error("Error fetching wine data:", error);
+      }
+    };
+
+    fetchDataAndSetWines();
+  }, []);
+
+  const filterWines = (items: WineProps[], criteria: string) => {
+    return items.filter((item) => {
+      return item.color === criteria;
+    });
+  };
 
   const handleFilterClick = (criteria: string) => {
-    const query = criteria ? { type: criteria } : {};
-    router.push({
-      pathname: "/products",
-      query,
-    });
+    if (criteria === "") {
+      setFilteredWines(wines);
+    } else {
+      const filtered = filterWines(wines, criteria);
+      setFilteredWines(filtered);
+    }
   };
 
   const addToCart = (wine: WineProps) => {
     const existingItems = JSON.parse(localStorage.getItem("cartItems") ?? "[]");
+
     const updatedItems = [...existingItems, wine];
+
     localStorage.setItem("cartItems", JSON.stringify(updatedItems));
   };
-  useEffect(() => {
-    setFilteredWines(wines);
-  }, [wines]);
 
   return (
     <>
@@ -31,17 +52,17 @@ export default function WinesListing({ wines }: { wines: WineProps[] }) {
         <FilterButton
           filterType="Бело"
           label="Бели вина"
-          onClick={() => handleFilterClick("Бело")}
+          onClick={handleFilterClick}
         />
         <FilterButton
           filterType="Црвено"
           label=" Црвени вина"
-          onClick={() => handleFilterClick("Црвено")}
+          onClick={handleFilterClick}
         />
         <FilterButton
           filterType=""
           label="Сите вина"
-          onClick={() => handleFilterClick("")}
+          onClick={handleFilterClick}
         />
       </div>
 
