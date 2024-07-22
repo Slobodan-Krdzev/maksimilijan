@@ -3,7 +3,7 @@ import WinesListing from "@/components/WinesListing";
 import { fetchData } from "@/fetchData";
 import { WineProps } from "@/interface/type";
 
-export async function getServerSideProps(context: any) {
+export async function renderWines(context: any) {
   const { query } = context;
   const { type } = query;
 
