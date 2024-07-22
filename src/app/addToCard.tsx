@@ -1,4 +1,4 @@
-import { WineProps } from "@/components/Card";
+import { WineProps } from "@/interface/type";
 import router from "next/dist/client/router";
 
 const addToCart = (wine: WineProps) => {
@@ -7,7 +7,6 @@ const addToCart = (wine: WineProps) => {
   const updatedCart = [...existingCart, cartItem];
   localStorage.setItem("cart", JSON.stringify(updatedCart));
 
-  // Префрлете корисникот на страницата за кошничката
   router.push("/addtocart");
 };
 export default addToCart;
