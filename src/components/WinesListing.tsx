@@ -8,14 +8,8 @@ export default function WinesListing({ wines }: { wines: WineProps[] }) {
   const [filteredWines, setFilteredWines] = useState<WineProps[]>(wines);
   const router = useRouter();
 
-  const filterWines = (items: WineProps[], criteria: string) => {
-    return items.filter((item) => {
-      return item.color === criteria;
-    });
-  };
-
   const handleFilterClick = (criteria: string) => {
-    const query = criteria ? { color: criteria } : {};
+    const query = criteria ? { type: criteria } : {};
     router.push({
       pathname: "/products",
       query,
@@ -27,7 +21,6 @@ export default function WinesListing({ wines }: { wines: WineProps[] }) {
     const updatedItems = [...existingItems, wine];
     localStorage.setItem("cartItems", JSON.stringify(updatedItems));
   };
-
   useEffect(() => {
     setFilteredWines(wines);
   }, [wines]);

@@ -5,19 +5,19 @@ import { WineProps } from "@/interface/type";
 
 export async function getServerSideProps(context: any) {
   const { query } = context;
-  const { color } = query;
+  const { type } = query;
 
-  let endpoint = "wines";
+  const endpoint = type
+    ? `https://maksimilijan-wine--room.glitch.me/wines?type=${encodeURIComponent(
+        type
+      )}`
+    : "https://maksimilijan-wine--room.glitch.me/wines";
+
   const data: WineProps[] = await fetchData(endpoint);
-
-  let filteredData = data;
-  if (color) {
-    filteredData = data.filter((wine) => wine.color === color);
-  }
 
   return {
     props: {
-      wines: filteredData,
+      wines: data,
     },
   };
 }
