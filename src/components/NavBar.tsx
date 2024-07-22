@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -45,11 +47,11 @@ function NavBar() {
           </div>
           <div>
             <div
-              className={flex-1 justify-self-center text-wine md:block md:pb-0 md:mt-0 bg-cream md:bg-white transition-all duration-700 ease-in-out ${
+              className={`flex-1 justify-self-center text-wine md:block md:pb-0 md:mt-0 bg-cream md:bg-white transition-all duration-700 ease-in-out ${
                 navbar
                   ? "max-h-screen opacity-100"
                   : "max-h-0 opacity-0 md:opacity-100 md:max-h-screen"
-              }}
+              }`}
             >
               <ul className="items-center justify-center md:flex">
                 <NavItem
@@ -91,7 +93,7 @@ function NavBar() {
           <div>
             <Link
               href={"/addtocart"}
-              className={text-xl py-2 mx-1 md:px-6 text-center md:border-b-0 transition-colors duration-700 ease-in-out }
+              className={`text-xl py-2 mx-1 md:px-6 text-center md:border-b-0 transition-colors duration-700 ease-in-out `}
             >
               🛒
             </Link>
