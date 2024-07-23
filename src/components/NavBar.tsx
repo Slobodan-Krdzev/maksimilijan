@@ -43,6 +43,14 @@ function NavBar() {
                   )}
                 </button>
               </div>
+              <div>
+            <Link
+              href={"/addtocart"}
+              className={`text-xl py-2 mx-1 md:px-6 text-center md:border-b-0 transition-colors duration-700 ease-in-out `}
+            >
+              🛒
+            </Link>
+          </div>
             </div>
           </div>
           <div>
@@ -87,14 +95,7 @@ function NavBar() {
               </ul>
             </div>
           </div>
-          <div>
-            <Link
-              href={"/addtocart"}
-              className={`text-xl py-2 mx-1 md:px-6 text-center md:border-b-0 transition-colors duration-700 ease-in-out `}
-            >
-              🛒
-            </Link>
-          </div>
+         
         </div>
       </nav>
     </div>
