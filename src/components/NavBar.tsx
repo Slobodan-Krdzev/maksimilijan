@@ -25,13 +25,13 @@ function NavBar() {
                 />
               </Link>
               <div>
-                <Link
-                  href={"/addtocart"}
-                  className={`text-xl py-2 mx-1 md:px-6 text-center md:border-b-0 transition-colors duration-700 ease-in-out`}
-                >
-                  🛒
-                </Link>
-              </div>
+            <Link
+              href={"/addtocart"}
+              className={`text-xl py-2 mx-1 md:px-6 text-center md:border-b-0 transition-colors duration-700 ease-in-out `}
+            >
+              🛒
+            </Link>
+          </div>
               <div className="md:hidden">
                 <button
                   className="p-2 rounded-md outline-none focus:border-gray-400 focus:border"
@@ -50,14 +50,17 @@ function NavBar() {
                   )}
                 </button>
               </div>
+             
             </div>
           </div>
-          <div
-            className={`fixed top-0 right-0 h-full w-2/3 bg-cream md:bg-white transition-transform duration-700 ease-in-out transform ${
-              navbar ? "translate-x-0" : "translate-x-full"
-            } md:relative md:translate-x-0 md:flex md:w-auto md:h-auto`}
-          >
-            <div className="flex-1 justify-self-center text-wine md:block md:pb-0 md:mt-0">
+          <div>
+            <div
+              className={`flex-1 justify-self-center text-wine md:block md:pb-0 md:mt-0 bg-cream md:bg-white transition-all duration-700 ease-in-out ${
+                navbar
+                  ? "max-h-screen opacity-100"
+                  : "max-h-0 opacity-0 md:opacity-100 md:max-h-screen"
+              }`}
+            >
               <ul className="items-center justify-center md:flex">
                 <NavItem
                   href={"/"}
@@ -92,6 +95,7 @@ function NavBar() {
               </ul>
             </div>
           </div>
+         
         </div>
       </nav>
     </div>
