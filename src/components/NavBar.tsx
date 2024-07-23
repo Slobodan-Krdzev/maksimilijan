@@ -14,48 +14,37 @@ function NavBar() {
     <div>
       <nav className="z-10">
         <div className="justify-between md:items-center md:flex md:px-8">
-          <div>
-            <div className="flex items-center justify-between md:block">
-              <Link href="/">
-                <Image
-                  src="/logo_white.jpg"
-                  width={100}
-                  height={100}
-                  alt="logo"
-                />
-              </Link>
-              <div>
-            <Link
-              href={"/addtocart"}
-              className={`text-xl py-2 mx-1 md:px-6 text-center md:border-b-0 transition-colors duration-700 ease-in-out `}
-            >
-              🛒
+          <div className="flex items-center justify-between w-full md:w-auto">
+            <Link href="/">
+              <Image
+                src="/logo_white.jpg"
+                width={100}
+                height={100}
+                alt="logo"
+              />
             </Link>
-          </div>
-              <div className="md:hidden">
-                <button
-                  className="p-2 rounded-md outline-none focus:border-gray-400 focus:border"
-                  onClick={() => setNavbar(!navbar)}
-                >
-                  {navbar ? (
-                    <Image src="/close.svg" width={30} height={30} alt="logo" />
-                  ) : (
-                    <Image
-                      src="/hamburger-menu.svg"
-                      width={30}
-                      height={30}
-                      alt="logo"
-                      className="focus:border-none active:border-none"
-                    />
-                  )}
-                </button>
-              </div>
-             
+            <div className="md:hidden">
+              <button
+                className="p-2 rounded-md outline-none focus:border-gray-400 focus:border"
+                onClick={() => setNavbar(!navbar)}
+              >
+                {navbar ? (
+                  <Image src="/close.svg" width={30} height={30} alt="close menu" />
+                ) : (
+                  <Image
+                    src="/hamburger-menu.svg"
+                    width={30}
+                    height={30}
+                    alt="open menu"
+                    className="focus:border-none active:border-none"
+                  />
+                )}
+              </button>
             </div>
           </div>
-          <div>
+          <div className="flex-1 flex justify-between items-center">
             <div
-              className={`flex-1 justify-self-center text-wine md:block md:pb-0 md:mt-0 bg-cream md:bg-white transition-all duration-700 ease-in-out ${
+              className={`flex-1 text-wine md:block md:pb-0 md:mt-0 bg-cream md:bg-white transition-all duration-700 ease-in-out ${
                 navbar
                   ? "max-h-screen opacity-100"
                   : "max-h-0 opacity-0 md:opacity-100 md:max-h-screen"
@@ -94,8 +83,15 @@ function NavBar() {
                 />
               </ul>
             </div>
+            <div>
+              <Link
+                href={"/addtocart"}
+                className={`text-xl py-2 mx-1 md:px-6 text-center md:border-b-0 transition-colors duration-700 ease-in-out `}
+              >
+                🛒
+              </Link>
+            </div>
           </div>
-         
         </div>
       </nav>
     </div>
