@@ -24,7 +24,14 @@ function NavBar() {
                   alt="logo"
                 />
               </Link>
-
+              <div>
+            <Link
+              href={"/addtocart"}
+              className={`text-xl py-2 mx-1 md:px-6 text-center md:border-b-0 transition-colors duration-700 ease-in-out `}
+            >
+              🛒
+            </Link>
+          </div>
               <div className="md:hidden">
                 <button
                   className="p-2 rounded-md outline-none focus:border-gray-400 focus:border"
@@ -43,14 +50,7 @@ function NavBar() {
                   )}
                 </button>
               </div>
-              <div>
-            <Link
-              href={"/addtocart"}
-              className={`text-xl py-2 mx-1 md:px-6 text-center md:border-b-0 transition-colors duration-700 ease-in-out `}
-            >
-              🛒
-            </Link>
-          </div>
+             
             </div>
           </div>
           <div>
