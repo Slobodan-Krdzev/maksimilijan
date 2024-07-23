@@ -13,7 +13,7 @@ function NavBar() {
   return (
     <div>
       <nav className="z-10">
-        <div className="justify-between md:items-center md:flex md:px-8">
+        <div className="md:flex md:items-center md:justify-between md:px-8">
           <div className="flex items-center justify-between w-full md:w-auto">
             <Link href="/">
               <Image
@@ -42,15 +42,9 @@ function NavBar() {
               </button>
             </div>
           </div>
-          <div className="flex-1 flex justify-between items-center">
-            <div
-              className={`flex-1 text-wine md:block md:pb-0 md:mt-0 bg-cream md:bg-white transition-all duration-700 ease-in-out ${
-                navbar
-                  ? "max-h-screen opacity-100"
-                  : "max-h-0 opacity-0 md:opacity-100 md:max-h-screen"
-              }`}
-            >
-              <ul className="items-center justify-center md:flex">
+          <div className="hidden md:flex md:flex-1 md:justify-between md:items-center">
+            <div className="flex-1 text-wine bg-cream md:bg-white transition-all duration-700 ease-in-out">
+              <ul className="flex justify-center items-center">
                 <NavItem
                   href={"/"}
                   label={"Почетна"}
@@ -83,13 +77,49 @@ function NavBar() {
                 />
               </ul>
             </div>
-            <div>
+            <div className="ml-auto">
               <Link
                 href={"/addtocart"}
                 className={`text-xl py-2 mx-1 md:px-6 text-center md:border-b-0 transition-colors duration-700 ease-in-out `}
               >
                 🛒
               </Link>
+            </div>
+          </div>
+          <div className={`md:hidden ${navbar ? 'block' : 'hidden'}`}>
+            <div className="flex-1 text-wine bg-cream transition-all duration-700 ease-in-out">
+              <ul className="flex flex-col items-center justify-center">
+                <NavItem
+                  href={"/"}
+                  label={"Почетна"}
+                  isActive={currentPath === "/"}
+                />
+                <NavItem
+                  href={"/aboutus"}
+                  label={"За нас"}
+                  isActive={currentPath === "/aboutus"}
+                />
+                <NavItem
+                  href={"/products"}
+                  label={"Производи"}
+                  isActive={currentPath === "/products"}
+                />
+                <NavItem
+                  href={"/nagradi"}
+                  label={"Награди"}
+                  isActive={currentPath === "/nagradi"}
+                />
+                <NavItem
+                  href={"/smestuvanje"}
+                  label={"Сместување"}
+                  isActive={currentPath === "/smestuvanje"}
+                />
+                <NavItem
+                  href={"/contact"}
+                  label={"Контакт"}
+                  isActive={currentPath === "/contact"}
+                />
+              </ul>
             </div>
           </div>
         </div>
