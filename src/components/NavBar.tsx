@@ -24,7 +24,7 @@ function NavBar() {
                   alt="logo"
                 />
               </Link>
-
+              
               <div className="md:hidden">
                 <button
                   className="p-2 rounded-md outline-none focus:border-gray-400 focus:border"
@@ -43,6 +43,7 @@ function NavBar() {
                   )}
                 </button>
               </div>
+             
             </div>
           </div>
           <div>
