@@ -1,3 +1,4 @@
+"use client";
 import Card from "@/components/Card";
 import { fetchData } from "@/fetchData";
 import { useEffect, useState } from "react";

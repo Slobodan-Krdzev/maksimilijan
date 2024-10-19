@@ -49,7 +49,7 @@ export default function WineDetail({
         <div className="relative overflow-hidden rounded-lg lg:h-auto">
           <Image
             src={image}
-            alt="ecommerce"
+            alt={name}
             width={800}
             height={1000}
             layout="responsive"
