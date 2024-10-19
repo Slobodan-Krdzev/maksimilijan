@@ -19,7 +19,7 @@ export const Gallery = () => {
           </div>
           <div className="bg-red-100 col-span-1 md:col-span-2 relative">
             <Image
-              src="/outdoor.jpg"
+              src="/gallery14.jpg"
               alt="card-image"
               layout="fill"
               objectFit="cover"
@@ -44,7 +44,7 @@ export const Gallery = () => {
           </div>
           <div className="bg-sky-100 row-span-1 md:row-span-2 col-span-1 md:col-span-2 relative">
             <Image
-              src="/temjanika.jpg"
+              src="/gallery8.jpg"
               alt="card-image"
               layout="fill"
               objectFit="cover"
@@ -52,7 +52,7 @@ export const Gallery = () => {
           </div>
           <div className="bg-emerald-100 relative">
             <Image
-              src="/winebottle.png"
+              src="/gallery2.jpg"
               alt="card-image"
               layout="fill"
               objectFit="cover"
