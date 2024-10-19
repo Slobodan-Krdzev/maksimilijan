@@ -47,7 +47,7 @@ const RoomDetails = ({
             <p className="text-lg">{description}</p>
             <div className="block mt-5">
               <a
-                href="/contact"
+                href="https://www.booking.com/Share-pWB61Bz"
                 className="py-2 px-4 md:py-5 md:px-8 border border-wine text-lg md:text-xl hover:bg-wine hover:text-white transition duration-300 ease-in-out"
               >
                 Резервирај
@@ -72,7 +72,7 @@ const RoomDetails = ({
             ГАЛЕРИЈА
           </p>
           <div className="mb-10">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {images &&
                 images.map((img: string) => (
                   <div

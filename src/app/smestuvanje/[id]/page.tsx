@@ -14,7 +14,7 @@ const RoomDetails = async ({
 
     return (
       <>
-        <Banner imageSrc={roomData.mainImage} text={roomData.name} />
+        <Banner imageSrc={roomData.mainImage} text={""} />
         {roomData && (
           <div>
             <RoomsDetails

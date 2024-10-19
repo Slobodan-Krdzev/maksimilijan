@@ -29,7 +29,7 @@ export const AppartmentsList = () => {
         </p>
         <div className="flex flex-col md:flex-row md:space-x-4 justify-center p-10 ">
           {rooms.map((room: RoomDetailProps) => (
-            <div key={room.id} className="flex-1 relative group ">
+            <div key={room.id} className="flex-1 relative group">
               <div className="relative w-full aspect-square overflow-hidden">
                 <Image
                   src={room.mainImage}
@@ -38,8 +38,8 @@ export const AppartmentsList = () => {
                   objectFit="cover"
                   className="rounded-lg w-full transform transition-transform duration-300 ease-in-out group-hover:scale-105"
                 />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-white text-2xl font-bold bg-black bg-opacity-50 p-4 rounded transform transition-transform duration-300 ease-in-out group-hover:scale-110">
+                <div className="absolute inset-0 flex items-start justify-start">
+                  <span className="text-white text-center text-2xl font-bold bg-black w-full bg-opacity-50 p-4 rounded transform transition-transform duration-300 ease-in-out group-hover:scale-110">
                     {room.name}
                   </span>
                 </div>

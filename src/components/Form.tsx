@@ -70,16 +70,16 @@ export default function Form() {
             </div>
             <div className="sm:col-span-2">
               <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">
-                Вашата порака
+                Број на луѓе
               </label>
-              <textarea
-                id="message"
-                rows={5}
-                className="block p-2.5 w-full text-sm text-wine rounded-lg shadow-sm border border-wine dark:placeholder-wine"
-                placeholder="Овде напишете за колку луѓе резервирате, Нашиот тим ќе ве контактира најбрзо!"
+              <input
+                type="number"
+                id="phone"
+                className="shadow-sm text-wine border border-wine text-sm rounded-lg focus:ring-wine1 block w-full p-2.5 dark:placeholder-wine1 dark:text-wine dark:focus:border-wine1"
+                placeholder="4"
                 value={formData.message}
                 onChange={handleChange}
-              ></textarea>
+              />
             </div>
             <button
               type="submit"

@@ -60,6 +60,11 @@ export default function WinesListing() {
           onClick={handleFilterClick}
         />
         <FilterButton
+          filterType="Ракија"
+          label="Ракија"
+          onClick={handleFilterClick}
+        />
+        <FilterButton
           filterType=""
           label="Сите вина"
           onClick={handleFilterClick}

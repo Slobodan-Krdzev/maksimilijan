@@ -5,13 +5,12 @@ import Link from "next/link";
 function Card({ id, name, color, image }: WineProps) {
   return (
     <div className="relative text-wine bg-white shadow-md bg-clip-border rounded-lg w-80 mb-12 transform transition duration-500 hover:scale-110">
-      <div className="relative rounded-t-lg overflow-hidden text-gray-700 bg-white bg-clip-border h-64 ">
+      <div className="relative w-full h-64 rounded-t-lg overflow-hidden">
         <Image
-          src={`${image}`}
+          src={image}
           alt="card-image"
-          width={600}
-          height={400}
-          layout="responsive"
+          fill
+          className="object-contain"
           loading="lazy"
         />
       </div>
