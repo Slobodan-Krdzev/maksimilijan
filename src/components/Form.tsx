@@ -77,20 +77,29 @@ export default function Form() {
             исконтактира веднаш со цел да се потврди нарачката. Taste the Wine!
           </p>
           <form className="space-y-8" onSubmit={handleSubmit}>
-            <div>
-              <label className="block mb-2 text-sm font-medium text-wine">
-                Вашиот email
-              </label>
+            <div className="relative">
               <input
                 type="email"
                 id="email"
-                className="shadow-sm text-wine border border-wine text-sm rounded-lg focus:ring-wine1 block w-full p-2.5 dark:placeholder-wine1 dark:text-wine dark:focus:border-wine1"
-                placeholder="name@flowbite.com"
+                className={`peer shadow-sm text-wine border border-wine text-sm rounded-lg 
+                 focus:ring-wine1 block w-full p-2.5 dark:placeholder-transparent 
+                 dark:text-wine dark:focus:border-wine1`}
+                placeholder="Вашиот email"
                 required
                 value={formData.email}
                 onChange={handleChange}
               />
+              <label
+                htmlFor="email"
+                className={`absolute left-2.5 top-2.5 text-sm text-wine 
+                 transition-all duration-300 transform scale-100 origin-[0] 
+                peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 
+                peer-focus:-translate-y-5 peer-focus:scale-75`}
+              >
+                Вашиот email
+              </label>
             </div>
+
             <div>
               <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                 Вашето име
@@ -123,7 +132,7 @@ export default function Form() {
               </label>
               <input
                 type="number"
-                id="numberPeople"
+                id="phone"
                 className="shadow-sm text-wine border border-wine text-sm rounded-lg focus:ring-wine1 block w-full p-2.5 dark:placeholder-wine1 dark:text-wine dark:focus:border-wine1"
                 placeholder="4"
                 value={formData.numberPeople}

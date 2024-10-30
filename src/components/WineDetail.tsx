@@ -38,7 +38,7 @@ export default function WineDetail({
     addToCart(product);
     openModal();
   };
-
+  console.log(description);
   return (
     <section className="flex flex-col lg:flex-row justify-center items-center text-wine p-5 lg:p-10">
       <div className="lg:w-1/3 lg:text-start mb-5 lg:mb-0">

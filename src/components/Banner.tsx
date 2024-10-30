@@ -36,7 +36,7 @@ const Banner: React.FC<BannerProps> = ({ imageSrc, text }) => {
           isTextVisible ? "opacity-100" : "opacity-0"
         }`}
       >
-        <h1 className=" text-3xl md:text-7xl font-bold text-white">{text}</h1>
+        <h1 className=" text-3xl md:text-7xl font-bold text-wine">{text}</h1>
       </div>
     </div>
   );

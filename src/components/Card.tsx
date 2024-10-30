@@ -6,11 +6,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 function Card({ id, name, color, image }: WineProps) {
-  const [isLoading, setIsLoading] = useState(true); // Лоадинг состојба
+  const [isLoading, setIsLoading] = useState(true);
 
   return (
     <div className="relative text-wine bg-white shadow-md bg-clip-border rounded-lg w-80 mb-12 transform transition duration-500 hover:scale-110">
-      {/* Image Skeleton */}
       <div className="relative w-full h-64 rounded-t-lg overflow-hidden">
         {isLoading && (
           <div className="w-full h-full animate-pulse">
@@ -29,7 +28,6 @@ function Card({ id, name, color, image }: WineProps) {
         />
       </div>
 
-      {/* Text Skeleton */}
       <div className="p-6">
         {isLoading ? (
           <div className="animate-pulse space-y-3">
@@ -43,7 +41,6 @@ function Card({ id, name, color, image }: WineProps) {
         )}
       </div>
 
-      {/* Button Skeleton */}
       <div className="py-3 flex">
         {isLoading ? (
           <div className="w-full h-12 bg-gray-300 rounded animate-pulse"></div>
