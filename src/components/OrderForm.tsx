@@ -5,6 +5,7 @@ import { CartItem } from "@/interface/type";
 import Image from "next/image";
 import { InputPayment } from "@/components/InputPayment";
 import { Dialog, Transition } from "@headlessui/react";
+import InputLabel from "./InputLabel";
 
 export const OrderForm = () => {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
@@ -118,58 +119,58 @@ export const OrderForm = () => {
         <h2 className="text-2xl font-bold mb-5">Детали за нарачка</h2>
         <form className="space-y-4" onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-            <InputPayment
+            <InputLabel
               id="firstName"
-              placeholder="Име*"
+              name="Име*"
               type="text"
               value={formData.firstName}
               onChange={handleChange}
             />
-            <InputPayment
+            <InputLabel
               id="lastName"
-              placeholder="Презиме*"
+              name="Презиме*"
               type="text"
               value={formData.lastName}
               onChange={handleChange}
             />
-            <InputPayment
+            <InputLabel
               id="country"
-              placeholder="Држава*"
+              name="Држава*"
               type="text"
               value={formData.country}
               onChange={handleChange}
             />
-            <InputPayment
+            <InputLabel
               id="street"
-              placeholder="Адреса на живеење*"
+              name="Адреса на живеење*"
               type="text"
               value={formData.street}
               onChange={handleChange}
             />
-            <InputPayment
+            <InputLabel
               id="town"
-              placeholder="Град*"
+              name="Град*"
               type="text"
               value={formData.town}
               onChange={handleChange}
             />
-            <InputPayment
+            <InputLabel
               id="postcode"
-              placeholder="Поштенски број*"
+              name="Поштенски број*"
               type="text"
               value={formData.postcode}
               onChange={handleChange}
             />
-            <InputPayment
+            <InputLabel
               id="phone"
-              placeholder="Телефон за контакт *"
+              name="Телефон за контакт *"
               type="tel"
               value={formData.phone}
               onChange={handleChange}
             />
-            <InputPayment
+            <InputLabel
               id="email"
-              placeholder="Емаил *"
+              name="Емаил *"
               type="email"
               value={formData.email}
               onChange={handleChange}

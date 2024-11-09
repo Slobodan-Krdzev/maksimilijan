@@ -1,6 +1,7 @@
 "use client";
 import { Dialog, Transition } from "@headlessui/react";
 import React, { Fragment, useState } from "react";
+import InputLabel from "./InputLabel";
 
 export default function Form() {
   const [modalMessage, setModalMessage] = useState("");
@@ -77,68 +78,35 @@ export default function Form() {
             исконтактира веднаш со цел да се потврди нарачката. Taste the Wine!
           </p>
           <form className="space-y-8" onSubmit={handleSubmit}>
-            <div className="relative">
-              <input
-                type="email"
-                id="email"
-                className={`peer shadow-sm text-wine border border-wine text-sm rounded-lg 
-                 focus:ring-wine1 block w-full p-2.5 dark:placeholder-transparent 
-                 dark:text-wine dark:focus:border-wine1`}
-                placeholder="Вашиот email"
-                required
-                value={formData.email}
-                onChange={handleChange}
-              />
-              <label
-                htmlFor="email"
-                className={`absolute left-2.5 top-2.5 text-sm text-wine 
-                 transition-all duration-300 transform scale-100 origin-[0] 
-                peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 
-                peer-focus:-translate-y-5 peer-focus:scale-75`}
-              >
-                Вашиот email
-              </label>
-            </div>
+            <InputLabel
+              id="email"
+              name="Вашиот email"
+              type="email"
+              value={formData.email}
+              onChange={handleChange}
+            />
+            <InputLabel
+              id="name"
+              name="Вашето име"
+              type="text"
+              value={formData.name}
+              onChange={handleChange}
+            />
+            <InputLabel
+              id="phone"
+              name="Вашиот телефонски број"
+              type="tel"
+              value={formData.phone}
+              onChange={handleChange}
+            />
+            <InputLabel
+              id="numberPeople"
+              name="Број на луѓе"
+              type="number"
+              value={formData.numberPeople}
+              onChange={handleChange}
+            />
 
-            <div>
-              <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
-                Вашето име
-              </label>
-              <input
-                type="text"
-                id="name"
-                className="shadow-sm text-wine border border-wine text-sm rounded-lg focus:ring-wine1 block w-full p-2.5 dark:placeholder-wine1 dark:text-wine dark:focus:border-wine1"
-                placeholder="Вашето име"
-                value={formData.name}
-                onChange={handleChange}
-              />
-            </div>
-            <div>
-              <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
-                Вашиот телефонски број
-              </label>
-              <input
-                type="tel"
-                id="phone"
-                className="shadow-sm text-wine border border-wine text-sm rounded-lg focus:ring-wine1 block w-full p-2.5 dark:placeholder-wine1 dark:text-wine dark:focus:border-wine1"
-                placeholder="070123567"
-                value={formData.phone}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="sm:col-span-2">
-              <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">
-                Број на луѓе
-              </label>
-              <input
-                type="number"
-                id="phone"
-                className="shadow-sm text-wine border border-wine text-sm rounded-lg focus:ring-wine1 block w-full p-2.5 dark:placeholder-wine1 dark:text-wine dark:focus:border-wine1"
-                placeholder="4"
-                value={formData.numberPeople}
-                onChange={handleChange}
-              />
-            </div>
             <button
               type="submit"
               className="border px-8 py-5 border-wine text-xl hover:bg-wine hover:text-white transition duration-300 ease-in-out block w-full"
