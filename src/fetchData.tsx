@@ -1,7 +1,7 @@
 export async function fetchData(endpoint: any) {
   const res = await fetch(
     `https://maksimilijan-wine--room.glitch.me/${endpoint}`,
-    { cache: "no-store" }
+    { next: { revalidate: 5000 } }
   );
 
   if (!res.ok) {

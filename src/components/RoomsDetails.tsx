@@ -45,7 +45,7 @@ const RoomDetails = ({
           <div className="w-full md:w-1/2 container mx-auto p-4 md:p-20">
             <h2 className="text-2xl font-bold mb-4">Опис</h2>
             <p className="text-lg">{description}</p>
-            <div className="block mt-5">
+            <div className="block mt-10">
               <a
                 href="https://www.booking.com/Share-pWB61Bz"
                 className="py-2 px-4 md:py-5 md:px-8 border border-wine text-lg md:text-xl hover:bg-wine hover:text-white transition duration-300 ease-in-out"

@@ -60,7 +60,6 @@ export default function WineDetail({
       </div>
       <div className="lg:w-1/3 lg:pl-10 grid grid-cols-2 lg:flex lg:flex-col">
         <WineDesc desc="Берба" result={vintage} />
-        <WineDesc desc="Созревање" result="Барик" />
         <WineDesc desc="Алкохол" result={alchocol} />
         <WineDesc desc="Боја" result={color} />
 
