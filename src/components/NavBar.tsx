@@ -10,6 +10,11 @@ function NavBar() {
   const [navbar, setNavbar] = useState(false);
   const currentPath = usePathname();
 
+  // Функција за затворање на менито кога ќе кликнете на линк
+  const handleLinkClick = () => {
+    setNavbar(false);
+  };
+
   return (
     <div>
       <nav className="z-10">
@@ -24,74 +29,92 @@ function NavBar() {
                   alt="logo"
                 />
               </Link>
-              
+
+              {/* Икона за корпичка - само на мобилна верзија */}
+              <div className="md:hidden mx-4">
+                <Link href="/addtocart" className="text-xl text-center">
+                  🛒
+                </Link>
+              </div>
+
+              {/* Хамбургер Мени */}
               <div className="md:hidden">
                 <button
                   className="p-2 rounded-md outline-none focus:border-gray-400 focus:border"
                   onClick={() => setNavbar(!navbar)}
                 >
                   {navbar ? (
-                    <Image src="/close.svg" width={30} height={30} alt="logo" />
+                    <Image
+                      src="/close.svg"
+                      width={30}
+                      height={30}
+                      alt="close"
+                    />
                   ) : (
                     <Image
                       src="/hamburger-menu.svg"
                       width={30}
                       height={30}
-                      alt="logo"
+                      alt="menu"
                       className="focus:border-none active:border-none"
                     />
                   )}
                 </button>
               </div>
-             
             </div>
           </div>
-          <div>
-            <div
-              className={`flex-1 justify-self-center text-wine md:block md:pb-0 md:mt-0 bg-cream md:bg-white transition-all duration-700 ease-in-out ${
-                navbar
-                  ? "max-h-screen opacity-100"
-                  : "max-h-0 opacity-0 md:opacity-100 md:max-h-screen"
-              }`}
-            >
-              <ul className="items-center justify-center md:flex">
-                <NavItem
-                  href={"/"}
-                  label={"Почетна"}
-                  isActive={currentPath === "/"}
-                />
-                <NavItem
-                  href={"/aboutus"}
-                  label={"За нас"}
-                  isActive={currentPath === "/aboutus"}
-                />
-                <NavItem
-                  href={"/products"}
-                  label={"Производи"}
-                  isActive={currentPath === "/products"}
-                />
-                <NavItem
-                  href={"/nagradi"}
-                  label={"Награди"}
-                  isActive={currentPath === "/nagradi"}
-                />
-                <NavItem
-                  href={"/smestuvanje"}
-                  label={"Сместување"}
-                  isActive={currentPath === "/smestuvanje"}
-                />
-                <NavItem
-                  href={"/contact"}
-                  label={"Контакт"}
-                  isActive={currentPath === "/contact"}
-                />
-              </ul>
-            </div>
+
+          <div
+            className={`flex-1 justify-self-center text-wine md:block md:pb-0 md:mt-0 transition-all duration-700 ease-in-out  ${
+              navbar
+                ? "bg-cream max-h-screen opacity-100 "
+                : "max-h-0 opacity-0 md:opacity-100 md:max-h-screen"
+            }`}
+          >
+            <ul className="items-center justify-center md:flex">
+              <NavItem
+                href="/"
+                label="Почетна"
+                isActive={currentPath === "/"}
+                onClick={handleLinkClick}
+              />
+              <NavItem
+                href="/aboutus"
+                label="За нас"
+                isActive={currentPath === "/aboutus"}
+                onClick={handleLinkClick}
+              />
+              <NavItem
+                href="/products"
+                label="Производи"
+                isActive={currentPath === "/products"}
+                onClick={handleLinkClick}
+              />
+              <NavItem
+                href="/nagradi"
+                label="Награди"
+                isActive={currentPath === "/nagradi"}
+                onClick={handleLinkClick}
+              />
+              <NavItem
+                href="/smestuvanje"
+                label="Сместување"
+                isActive={currentPath === "/smestuvanje"}
+                onClick={handleLinkClick}
+              />
+              <NavItem
+                href="/contact"
+                label="Контакт"
+                isActive={currentPath === "/contact"}
+                onClick={handleLinkClick}
+              />
+            </ul>
           </div>
-          <div>
+
+          <div className="hidden md:block">
             <Link
-              href={"/addtocart"}
-              className={`text-xl py-2 mx-1 md:px-6 text-center md:border-b-0 transition-colors duration-700 ease-in-out `}
+              href="/addtocart"
+              className="text-xl py-2 mx-1 md:px-6 text-center md:border-b-0 transition-colors duration-700 ease-in-out"
             >
               🛒
             </Link>
