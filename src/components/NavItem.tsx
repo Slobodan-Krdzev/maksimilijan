@@ -5,7 +5,7 @@ interface NavItemProps {
   href: string;
   label: string;
   isActive: boolean;
-  onClick: () => void; // Додаден onClick пропс
+  onClick: () => void;
 }
 
 const NavItem: React.FC<NavItemProps> = ({

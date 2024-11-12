@@ -6,14 +6,14 @@ import { useEffect, useState } from "react";
 
 function AboutSection({ reverse = false, image }: AboutSectionProps) {
   const { ref, inView } = useInView({
-    triggerOnce: true, // Тригерира само еднаш
-    threshold: 0.5, // Активирање на 20% видливост
+    triggerOnce: true,
+    threshold: 0.5,
   });
 
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    if (inView) setIsVisible(true); // Кога елементот е видлив, сетирај го на true
+    if (inView) setIsVisible(true);
   }, [inView]);
   return (
     <div
