@@ -20,7 +20,7 @@ export default function ContactPage() {
 
         <div className="w-full md:w-1/2 flex justify-center items-center p-4 md:p-10">
           <Image
-            src="/gallery1.jpg"
+            src="/gallery12.webp"
             width={1000}
             height={1000}
             alt="logo"
