@@ -115,9 +115,9 @@ export const OrderForm = () => {
 
   return (
     <div className="p-5 lg:flex lg:justify-between border-t">
-      <div className="lg:w-2/3">
+      <div className="lg:w-2/3 bg-cream">
         <h2 className="text-2xl font-bold mb-5">Детали за нарачка</h2>
-        <form className="space-y-4 bg-cream" onSubmit={handleSubmit}>
+        <form className="space-y-4" onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <InputLabel
               id="firstName"

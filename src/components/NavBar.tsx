@@ -10,7 +10,6 @@ function NavBar() {
   const [navbar, setNavbar] = useState(false);
   const currentPath = usePathname();
 
-  // Функција за затворање на менито кога ќе кликнете на линк
   const handleLinkClick = () => {
     setNavbar(false);
   };
@@ -30,14 +29,14 @@ function NavBar() {
                 />
               </Link>
 
-              {/* Икона за корпичка - само на мобилна верзија */}
+              {/* Icon for mobile version*/}
               <div className="md:hidden mx-4">
                 <Link href="/addtocart" className="text-xl text-center">
                   🛒
                 </Link>
               </div>
 
-              {/* Хамбургер Мени */}
+              {/* Hamburger menu */}
               <div className="md:hidden">
                 <button
                   className="p-2 rounded-md outline-none focus:border-gray-400 focus:border"
@@ -67,7 +66,7 @@ function NavBar() {
           <div
             className={`flex-1 justify-self-center text-wine md:block md:pb-0 md:mt-0 transition-all duration-700 ease-in-out  ${
               navbar
-                ? "bg-cream max-h-screen opacity-100 "
+                ? "bg-cream max-h-screen opacity-100 w-full"
                 : "max-h-0 opacity-0 md:opacity-100 md:max-h-screen"
             }`}
           >
