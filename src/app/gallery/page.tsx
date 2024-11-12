@@ -12,7 +12,7 @@ const metadata: Metadata = {
 export default function Gallery() {
   return (
     <>
-      <Banner imageSrc="/outdoor.jpg" text="Галерија" />
+      <Banner imageSrc="/gallery14.webp" text="Галерија" />
       <GalleryListing endpoint="images" title="ГАЛЕРИЈА" />
     </>
   );

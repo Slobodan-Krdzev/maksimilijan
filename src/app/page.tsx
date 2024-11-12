@@ -10,9 +10,9 @@ export default function Home() {
         imageSrc="/accomodation.webp"
         text="Maksimilijan Family Winery!"
       />
-      <AboutSection image="/outdoor.jpg" />
+      <AboutSection image="/gallery2.webp" />
       <Citat />
-      <AboutSection reverse={true} image="/bottles.jpg" />
+      <AboutSection reverse={true} image="/gallery14.webp" />
       <FooterInfo />
     </>
   );

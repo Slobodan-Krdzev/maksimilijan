@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <Banner imageSrc="/bottles.webp" text="Taste the Wine!" />
+      <Banner imageSrc="/gallery1.webp" text="Taste the Wine!" />
       <div className="flex flex-col md:flex-row p-8 md:p-24">
         <div className="w-full md:w-1/2 flex flex-col justify-center items-start text-wine px-4 md:px-10 mb-8 md:mb-0">
           <Form />

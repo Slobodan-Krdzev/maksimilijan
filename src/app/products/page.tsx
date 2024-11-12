@@ -6,7 +6,7 @@ import React from "react";
 export default function Products() {
   return (
     <>
-      <Banner imageSrc="/vineyard-hills.jpg" text="Нашите вина" />
+      <Banner imageSrc="/gallery11.webp" text="Нашите вина" />
 
       <WinesListing />
     </>

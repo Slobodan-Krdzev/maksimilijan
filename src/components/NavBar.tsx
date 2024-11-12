@@ -23,7 +23,7 @@ function NavBar() {
             <div className="flex items-center justify-between md:block">
               <Link href="/">
                 <Image
-                  src="/logo_white.jpg"
+                  src="/logo_white.webp"
                   width={100}
                   height={100}
                   alt="logo"

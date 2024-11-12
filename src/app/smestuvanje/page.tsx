@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function page() {
   return (
     <>
-      <Banner imageSrc="/accomodation.jpg" text="НАШИТЕ СОБИ" />
+      <Banner imageSrc="/gallery19.webp" text="НАШИТЕ СОБИ" />
       <AppartmentsList />
     </>
   );

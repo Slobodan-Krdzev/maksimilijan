@@ -11,7 +11,7 @@ const metadata: Metadata = {
 export default function Nagradi() {
   return (
     <>
-      <Banner imageSrc="/outdoor.jpg" text="Награди" />
+      <Banner imageSrc="/gallery16.webp" text="Награди" />
       <GalleryListing endpoint="awards" title="НАГРАДИ" />
     </>
   );
