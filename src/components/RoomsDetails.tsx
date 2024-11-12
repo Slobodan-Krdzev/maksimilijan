@@ -48,6 +48,7 @@ const RoomDetails = ({
             <div className="block mt-10">
               <a
                 href="https://www.booking.com/Share-pWB61Bz"
+                target="_blank"
                 className="py-2 px-4 md:py-5 md:px-8 border border-wine text-lg md:text-xl hover:bg-wine hover:text-white transition duration-300 ease-in-out"
               >
                 Резервирај
