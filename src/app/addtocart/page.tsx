@@ -44,7 +44,7 @@ const CartPage: React.FC = () => {
 
   return (
     <>
-      <Banner imageSrc="/gallery14.webp" text="Нарачај овде!" />
+      <Banner imageSrc="/gallery14.webp" text="" />
       <div className="p-5">
         <div className="flex flex-col lg:flex-row justify-between">
           <div className="lg:w-2/3">

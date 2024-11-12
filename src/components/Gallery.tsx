@@ -11,7 +11,7 @@ export const Gallery = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 grid-rows-3 md:grid-rows-4 gap-4 h-5/6 w-4/5 mx-auto">
           <div className="row-span-1 md:row-span-2 relative">
             <Image
-              src="/bottles.jpg"
+              src="/gallery2.webp"
               alt="card-image"
               layout="fill"
               objectFit="cover"
@@ -19,7 +19,7 @@ export const Gallery = () => {
           </div>
           <div className="bg-red-100 col-span-1 md:col-span-2 relative">
             <Image
-              src="/gallery14.jpg"
+              src="/gallery8.webp"
               alt="card-image"
               layout="fill"
               objectFit="cover"
@@ -27,7 +27,7 @@ export const Gallery = () => {
           </div>
           <div className="bg-purple-100 relative">
             <Image
-              src="/vina.jpg"
+              src="/gallery12.webp"
               alt="card-image"
               layout="fill"
               objectFit="cover"
@@ -35,7 +35,7 @@ export const Gallery = () => {
           </div>
           <div className="bg-violet-100 row-span-1 md:row-span-2 relative">
             <Image
-              src="/winery.jpg"
+              src="/icon1.webp"
               alt="card-image"
               layout="fill"
               objectFit="cover"
@@ -44,7 +44,7 @@ export const Gallery = () => {
           </div>
           <div className="bg-sky-100 row-span-1 md:row-span-2 col-span-1 md:col-span-2 relative">
             <Image
-              src="/gallery8.jpg"
+              src="/outdoor.webp"
               alt="card-image"
               layout="fill"
               objectFit="cover"
@@ -52,7 +52,7 @@ export const Gallery = () => {
           </div>
           <div className="bg-emerald-100 relative">
             <Image
-              src="/gallery2.jpg"
+              src="/gallery14.webp"
               alt="card-image"
               layout="fill"
               objectFit="cover"

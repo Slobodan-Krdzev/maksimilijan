@@ -15,7 +15,7 @@ const WineDetails = async ({
     console.log(wineData);
     return (
       <>
-        <Banner imageSrc="/vineyard-hills.jpg" text="Нашите вина" />
+        <Banner imageSrc="/gallery8.webp" text="Нашите вина" />
 
         {wineData && (
           <div>

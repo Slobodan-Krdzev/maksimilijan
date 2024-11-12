@@ -6,7 +6,7 @@ import { OrderForm } from "@/components/OrderForm";
 export default function CheckoutPage() {
   return (
     <>
-      <Banner imageSrc="/gallery14.webp" text="Вашата Нарачка" />;
+      <Banner imageSrc="/gallery14.webp" text="" />;
       <OrderForm />;
     </>
   );

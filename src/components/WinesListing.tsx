@@ -67,7 +67,7 @@ export default function WinesListing() {
         />
         <FilterButton
           filterType=""
-          label="Сите вина"
+          label="Сите производи"
           onClick={handleFilterClick}
         />
       </div>
