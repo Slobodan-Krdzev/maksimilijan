@@ -9,7 +9,7 @@ const WineDetails = async ({
   try {
     const response = await fetch(
       `https://maksimilijan-wine--room.glitch.me/wines/${params.id}`,
-      { next: { revalidate: 5000 } }
+      { next: { revalidate: 500000 } }
     );
     const wineData = await response.json();
     console.log(wineData);

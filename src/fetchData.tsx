@@ -1,7 +1,7 @@
 export async function fetchData(endpoint: any) {
   const res = await fetch(
     `https://maksimilijan-wine--room.glitch.me/${endpoint}`,
-    { next: { revalidate: 5000 } }
+    { next: { revalidate: 500000 } }
   );
 
   if (!res.ok) {
