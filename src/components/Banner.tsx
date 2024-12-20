@@ -33,7 +33,7 @@ const Banner: React.FC<BannerProps> = ({ imageSrc, text }) => {
 
       <div
         className={`absolute inset-0 flex justify-center items-center transition-opacity duration-1000 ${
-          isTextVisible ? "opacity-100" : "opacity-0"
+          isTextVisible ? " opacity-100" : "opacity-0"
         }`}
       >
         <h1 className=" text-3xl md:text-7xl font-bold text-wine">{text}</h1>
