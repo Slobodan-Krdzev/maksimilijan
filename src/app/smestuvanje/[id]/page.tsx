@@ -9,7 +9,7 @@ const RoomDetails = async ({
   try {
     const response = await fetch(
       `https://maksimilijan-wine--room.glitch.me/smestuvanje/${params.id}`,
-      { next: { revalidate: 500000 } }
+      { next: { revalidate: 5000 } }
     );
     const roomData = await response.json();
 
