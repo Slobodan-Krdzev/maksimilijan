@@ -62,7 +62,7 @@ export default function WineDetail({
         <WineDesc desc="Берба" result={vintage} />
         <WineDesc desc="Алкохол" result={alchocol} />
         <WineDesc desc="Боја" result={color} />
-        <WineDesc desc="Цена" result={price} />
+        <WineDesc desc="Цена" result={`${price} денари`} />
 
         <button
           className="border px-6 py-3 md:px-4 md:py-2 border-wine text-lg md:text-xl hover:bg-wine hover:text-white transition duration-300 ease-in-out"
