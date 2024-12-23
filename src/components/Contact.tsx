@@ -7,7 +7,7 @@ export const Contact = () => {
     <div className="lg:w-1/2 bg-wine text-cream p-10 mr-2">
       <p className="text-5xl">Контакт</p>
       <div className="py-5 text-xl md:text-2xl">
-        <p>Maksimilihan Famili Winery</p>
+        <p>Maksimilijan Family Winery</p>
         <p>с. Пепелиште</p>
         <p>Неготино 1440</p>
       </div>
