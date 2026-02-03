@@ -7,28 +7,54 @@ import WineDetail from "@/components/WineDetail";
 
 export default function WineDetails() {
   const params = useParams<{ id: string }>();
+
   const [wineData, setWineData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [err, setErr] = useState<string | null>(null);
 
   useEffect(() => {
     const load = async () => {
       try {
-        const res = await fetch("/db.json", { cache: "no-store" });
-        if (!res.ok) throw new Error("Failed to fetch db.json");
+        setLoading(true);
+        setErr(null);
+
+        const url = `${window.location.origin}/db.json`;
+        const res = await fetch(url, { cache: "no-store" });
+        if (!res.ok) throw new Error(`db.json fetch failed: ${res.status}`);
 
         const db = await res.json();
-        const found = db.wines?.find((w: any) => w.id === params.id);
 
-        setWineData(found || null);
-      } catch (e) {
+        const found = db.wines?.find(
+          (w: any) => String(w.id) === String(params.id)
+        );
+
+        console.log("DETAIL ID:", params.id);
+        console.log("FOUND:", found);
+
+        if (!found) {
+          setWineData(null);
+          setErr(`Не е пронајден производ со id: ${params.id}`);
+        } else {
+          setWineData(found);
+        }
+      } catch (e: any) {
         console.error("Error fetching wine data:", e);
+        setErr(e?.message || "Непозната грешка");
         setWineData(null);
+      } finally {
+        setLoading(false);
       }
     };
 
     if (params?.id) load();
   }, [params?.id]);
 
-  if (!wineData) return null; // можеш и "Loading..." ако сакаш
+  if (loading) return <p className="p-6 text-center">Се вчитува...</p>;
+
+  if (err) return <p className="p-6 text-center text-red-600">{err}</p>;
+
+  if (!wineData)
+    return <p className="p-6 text-center">Нема податоци за овој продукт.</p>;
 
   return (
     <>
