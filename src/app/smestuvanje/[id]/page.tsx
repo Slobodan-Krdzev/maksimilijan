@@ -1,44 +1,75 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
 import Banner from "@/components/Banner";
 import RoomsDetails from "@/components/RoomsDetails";
-import { fetchData } from "@/fetchData";
 
-const RoomDetails = async ({
-  params,
-}: {
-  params: { id: string; name: string };
-}) => {
-  try {
-    // земи ги сите сместувања од db.json
-    const rooms = await fetchData("smestuvanje");
+export default function RoomDetails() {
+  const params = useParams<{ id: string }>();
 
-    // најди по id
-    const roomData = rooms?.find((room: any) => room.id === params.id);
+  const [roomData, setRoomData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [err, setErr] = useState<string | null>(null);
 
-    if (!roomData) {
-      console.error("Room not found for id:", params.id);
-      return null;
-    }
+  useEffect(() => {
+    const load = async () => {
+      try {
+        setLoading(true);
+        setErr(null);
 
-    return (
-      <>
-        <Banner imageSrc={roomData.mainImage} text={""} />
-        <div>
-          <RoomsDetails
-            name={roomData.name}
-            price={roomData.price}
-            description={roomData.description}
-            id={roomData.id}
-            location={roomData.location}
-            mainImage={roomData.mainImage}
-            images={roomData.images}
-          />
-        </div>
-      </>
-    );
-  } catch (error) {
-    console.error("Error fetching room data:", error);
-    return null;
-  }
-};
+        const url = `${window.location.origin}/db.json`;
+        const res = await fetch(url, { cache: "no-store" });
+        if (!res.ok) throw new Error(`db.json fetch failed: ${res.status}`);
 
-export default RoomDetails;
+        const db = await res.json();
+
+        const found = db.smestuvanje?.find(
+          (room: any) => String(room.id) === String(params.id)
+        );
+
+        console.log("ROOM ID:", params.id);
+        console.log("FOUND ROOM:", found);
+
+        if (!found) {
+          setRoomData(null);
+          setErr(`Не е пронајдена соба со id: ${params.id}`);
+        } else {
+          setRoomData(found);
+        }
+      } catch (e: any) {
+        console.error("Error fetching room data:", e);
+        setErr(e?.message || "Непозната грешка");
+        setRoomData(null);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    if (params?.id) load();
+  }, [params?.id]);
+
+  if (loading) return <p className="p-6 text-center">Се вчитува...</p>;
+
+  if (err) return <p className="p-6 text-center text-red-600">{err}</p>;
+
+  if (!roomData)
+    return <p className="p-6 text-center">Нема податоци за ова сместување.</p>;
+
+  return (
+    <>
+      <Banner imageSrc={roomData.mainImage} text={""} />
+      <div>
+        <RoomsDetails
+          name={roomData.name}
+          price={roomData.price}
+          description={roomData.description}
+          id={roomData.id}
+          location={roomData.location}
+          mainImage={roomData.mainImage}
+          images={roomData.images}
+        />
+      </div>
+    </>
+  );
+}
