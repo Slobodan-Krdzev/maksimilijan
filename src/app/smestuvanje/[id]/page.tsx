@@ -1,5 +1,6 @@
 import Banner from "@/components/Banner";
 import RoomsDetails from "@/components/RoomsDetails";
+import { fetchData } from "@/fetchData";
 
 const RoomDetails = async ({
   params,
@@ -7,19 +8,11 @@ const RoomDetails = async ({
   params: { id: string; name: string };
 }) => {
   try {
-    // Вчитување од локален db.json (во public/)
-    const response = await fetch("http://localhost:3000/db.json", {
-      cache: "no-store",
-    });
+    // земи ги сите сместувања од db.json
+    const rooms = await fetchData("smestuvanje");
 
-    if (!response.ok) {
-      throw new Error("Failed to fetch db.json");
-    }
-
-    const db = await response.json();
-
-    // Најди соба по ID
-    const roomData = db.smestuvanje?.find((room: any) => room.id === params.id);
+    // најди по id
+    const roomData = rooms?.find((room: any) => room.id === params.id);
 
     if (!roomData) {
       console.error("Room not found for id:", params.id);
