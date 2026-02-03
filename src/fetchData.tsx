@@ -1,12 +1,9 @@
-export async function fetchData(endpoint: any) {
-  const res = await fetch(
-    `https://maksimilijan-wine--room.glitch.me/${endpoint}`,
-    { next: { revalidate: 500000 } }
-  );
+export async function fetchData(endpoint: string) {
+  const res = await fetch("/db.json", { cache: "no-store" });
+  if (!res.ok) throw new Error("Failed to fetch local db.json");
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
+  const db = await res.json();
 
-  return res.json();
+  // endpoint: "wines", "images", "smestuvanje", "awards"
+  return db[endpoint];
 }

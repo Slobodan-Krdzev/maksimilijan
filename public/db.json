@@ -4,7 +4,7 @@
             "id":"1",
             "name":"Вранец",
             "color": "Црвено",
-            "image": "/vranec_bariq.jpg",
+            "image": "/vranec_bariq_new.png",
             "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit Corporis iste Dolorum inventore dicta nostrum libero doloribus assumenda, accusantium quis fugiat cum voluptatibus temporibus esse odio ipsum ad facilis perferendis nobis voluptate quam quaerat officia laborum est. Aperiam ut",
             "vintage" : 2023,
             "alchocol"  : 12.5,
@@ -14,7 +14,7 @@
             "id":"2",
             "name":"Темајника",
             "color": "Бело",
-            "image": "/winebottle.png",
+            "image": "/temjanika.png",
             "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit Corporis iste Dolorum inventore dicta nostrum libero doloribus assumenda, accusantium quis fugiat cum voluptatibus temporibus esse odio ipsum ad facilis perferendis nobis voluptate quam quaerat officia laborum est. Aperiam ut",
             "vintage" : 2023,
             "alchocol"  : 12.5,
@@ -24,7 +24,7 @@
             "id":"3",
             "name":"Станушина",
             "color": "Бело",
-            "image": "/malena.jpg",
+            "image": "/rose_malena.png",
             "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit Corporis iste Dolorum inventore dicta nostrum libero doloribus assumenda, accusantium quis fugiat cum voluptatibus temporibus esse odio ipsum ad facilis perferendis nobis voluptate quam quaerat officia laborum est. Aperiam ut",
             "vintage" : 2023,
             "alchocol"  : 12.5,
@@ -32,9 +32,9 @@
         },
         {
             "id":"4",
-            "name":"Розе",
+            "name":"Рајски Ризлинг",
             "color": "Бело",
-            "image": "/bella.jpg",
+            "image": "/risling.png",
             "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit Corporis iste Dolorum inventore dicta nostrum libero doloribus assumenda, accusantium quis fugiat cum voluptatibus temporibus esse odio ipsum ad facilis perferendis nobis voluptate quam quaerat officia laborum est. Aperiam ut",
             "vintage" : 2023,
             "alchocol"  : 12.5,
@@ -44,50 +44,38 @@
         ,
         {
             "id":"5",
-            "name":"Смедеревка",
+            "name":"Рајски Ризлинг",
             "color": "Бело",
-            "image": "/bella.jpg",
+            "image": "/risling.png",
             "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit Corporis iste Dolorum inventore dicta nostrum libero doloribus assumenda, accusantium quis fugiat cum voluptatibus temporibus esse odio ipsum ad facilis perferendis nobis voluptate quam quaerat officia laborum est. Aperiam ut",
             "vintage" : 2023,
             "alchocol"  : 12.5,
-            "price" : 300
-        
-        }
-        ,
+            "price" : 250
+       
+        },
         {
             "id":"6",
-            "name":"Каберне Совињон",
+            "name":"Рајски Ризлинг",
             "color": "Бело",
-            "image": "/bella.jpg",
+            "image": "/risling.png",
             "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit Corporis iste Dolorum inventore dicta nostrum libero doloribus assumenda, accusantium quis fugiat cum voluptatibus temporibus esse odio ipsum ad facilis perferendis nobis voluptate quam quaerat officia laborum est. Aperiam ut",
             "vintage" : 2023,
             "alchocol"  : 12.5,
-            "price" : 300
-        
+            "price" : 250
+       
         },
         {
             "id":"7",
             "name":"Рајски Ризлинг",
             "color": "Бело",
-            "image": "/bella.jpg",
+            "image": "/risling.png",
             "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit Corporis iste Dolorum inventore dicta nostrum libero doloribus assumenda, accusantium quis fugiat cum voluptatibus temporibus esse odio ipsum ad facilis perferendis nobis voluptate quam quaerat officia laborum est. Aperiam ut",
             "vintage" : 2023,
             "alchocol"  : 12.5,
-            "price" : 300
-        
+            "price" : 250
+       
         }
-        ,
-        {
-            "id":"8",
-            "name":"Рајски Ризлинг",
-            "color": "Црвено",
-            "image": "/bella.jpg",
-            "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit Corporis iste Dolorum inventore dicta nostrum libero doloribus assumenda, accusantium quis fugiat cum voluptatibus temporibus esse odio ipsum ad facilis perferendis nobis voluptate quam quaerat officia laborum est. Aperiam ut",
-            "vintage" : 2023,
-            "alchocol"  : 12.5,
-            "price" : 300
         
-        }
     ],
 
 
@@ -137,52 +125,52 @@
     "smestuvanje": [
     {
       "id":"333",
-      "name": "Соба Изабела",
-      "description": "Соба Изабела располага со најмодерни удобности. Уживајте во пространа светла соба со комфорен кревет, приватна бања, бесплатен Wi-Fi, клима уред и телевизор. Идеална за деловни патници и туристи. На одлична локација, во село Пепелиште, Неготино. Уживајте во престојот",
+      "name": "Соба Икон",
+      "description": "Соба Икон располага со најмодерни удобности. Уживајте во пространа светла соба со комфорен кревет, приватна бања, бесплатен Wi-Fi, клима уред и телевизор. Идеална за деловни патници и туристи. На одлична локација, во село Пепелиште, Неготино. Уживајте во престојот",
       "location": "с. Пепелиште, Неготино",
       "price": 30,
-      "mainImage": "/izabela.jpg",
+      "mainImage": "/icone.webp",
       "images": [
-        "room1.jpg",
-        "room2.jpg",
-        "room3.jpg",
-        "room4.jpg",
-        "room5.jpg",
-        "room6.jpg"
+        "icon1.webp",
+        "icon2.webp",
+        "icon3.webp",
+        "icon4.webp",
+        "icon5.webp",
+        "icon6.webp"
    
       ]
       
     },
     {
       "id": "222",
-      "name": "Соба Максимилијан",
-      "description": "Соба Максимилијан располага со најмодерни удобности. Уживајте во пространа светла соба со комфорен кревет, приватна бања, бесплатен Wi-Fi, клима уред и телевизор. Идеална за деловни патници и туристи. На одлична локација, во село Пепелиште, Неготино. Уживајте во престојот",
+      "name": "Соба Бела",
+      "description": "Соба Бела располага со најмодерни удобности. Уживајте во пространа светла соба со комфорен кревет, приватна бања, бесплатен Wi-Fi, клима уред и телевизор. Идеална за деловни патници и туристи. На одлична локација, во село Пепелиште, Неготино. Уживајте во престојот",
       "location": "с. Пепелиште, Неготино",
       "price": 30,
-     "mainImage": "/maksimilijan.jpg",
+     "mainImage": "/bella.webp",
       "images": [
-        "room1.jpg",
-        "room2.jpg",
-        "room3.jpg",
-        "room4.jpg",
-        "room5.jpg",
-        "room6.jpg"
+        "bella1.webp",
+        "bella2.webp",
+        "bella3.webp",
+        "bella4.webp",
+        "bella5.webp",
+        "bella6.webp"
       ]
     },
     {
       "id": "444",
-      "name": "Соба Пепелиште",
-      "description": "Соба Пепелиште располага со најмодерни удобности. Уживајте во пространа светла соба со комфорен кревет, приватна бања, бесплатен Wi-Fi, клима уред и телевизор. Идеална за деловни патници и туристи. На одлична локација, во село Пепелиште, Неготино. Уживајте во престојот",
+      "name": "Соба Малена",
+      "description": "Соба Малена располага со најмодерни удобности. Уживајте во пространа светла соба со комфорен кревет, приватна бања, бесплатен Wi-Fi, клима уред и телевизор. Идеална за деловни патници и туристи. На одлична локација, во село Пепелиште, Неготино. Уживајте во престојот",
       "location": "с. Пепелиште, Неготино",
       "price": 30,
-     "mainImage": "/room3.jpg",
+     "mainImage": "/malena.webp",
       "images": [
-        "room1.jpg",
-        "room2.jpg",
-        "room3.jpg",
-        "room4.jpg",
-        "room5.jpg",
-        "room6.jpg"
+        "malena1.webp",
+        "malena2.webp",
+        "malena3.webp",
+        "malena4.webp",
+        "malena5.webp",
+        "malena6.webp"
       ]
     }
     

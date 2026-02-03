@@ -7,16 +7,17 @@ const WineDetails = async ({
   params: { id: string; name: string };
 }) => {
   try {
-    const response = await fetch(
-      `https://maksimilijan-wine--room.glitch.me/wines/${params.id}`,
-      { next: { revalidate: 500000 } }
-    );
-    const wineData = await response.json();
-    console.log(wineData);
+    const res = await fetch("http://localhost:3000/db.json", {
+      cache: "no-store",
+    });
+    if (!res.ok) throw new Error("Failed to fetch db.json");
+
+    const db = await res.json();
+    const wineData = db.wines.find((w: any) => w.id === params.id);
+
     return (
       <>
         <Banner imageSrc="/gallery8.webp" text="Нашите вина" />
-
         {wineData && (
           <div>
             <WineDetail

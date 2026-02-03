@@ -14,6 +14,8 @@ export default function WinesListing() {
       try {
         const endpoint = "wines";
         const data = await fetchData(endpoint);
+        console.log("DATA:", data);
+
         setWines(data);
         setFilteredWines(data);
       } catch (error) {

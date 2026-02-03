@@ -7,28 +7,39 @@ const RoomDetails = async ({
   params: { id: string; name: string };
 }) => {
   try {
-    const response = await fetch(
-      `https://maksimilijan-wine--room.glitch.me/smestuvanje/${params.id}`,
-      { next: { revalidate: 500000 } }
-    );
-    const roomData = await response.json();
+    // Вчитување од локален db.json (во public/)
+    const response = await fetch("http://localhost:3000/db.json", {
+      cache: "no-store",
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to fetch db.json");
+    }
+
+    const db = await response.json();
+
+    // Најди соба по ID
+    const roomData = db.smestuvanje?.find((room: any) => room.id === params.id);
+
+    if (!roomData) {
+      console.error("Room not found for id:", params.id);
+      return null;
+    }
 
     return (
       <>
         <Banner imageSrc={roomData.mainImage} text={""} />
-        {roomData && (
-          <div>
-            <RoomsDetails
-              name={roomData.name}
-              price={roomData.price}
-              description={roomData.description}
-              id={roomData.id}
-              location={roomData.location}
-              mainImage={roomData.mainImage}
-              images={roomData.images}
-            />
-          </div>
-        )}
+        <div>
+          <RoomsDetails
+            name={roomData.name}
+            price={roomData.price}
+            description={roomData.description}
+            id={roomData.id}
+            location={roomData.location}
+            mainImage={roomData.mainImage}
+            images={roomData.images}
+          />
+        </div>
       </>
     );
   } catch (error) {
